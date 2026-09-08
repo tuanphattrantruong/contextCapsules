@@ -1,0 +1,26 @@
+E7 concurrency study, 32 cores
+  stat    t=1   p50=   291.7 ns  thr=   3479.3 kops/s
+  stat    t=2   p50=   291.7 ns  thr=   6024.9 kops/s
+  stat    t=4   p50=   291.7 ns  thr=  10801.4 kops/s
+  stat    t=8   p50=   375.0 ns  thr=  18345.3 kops/s
+  stat    t=16  p50=   291.7 ns  thr=  40908.7 kops/s
+  stat    t=32  p50=   375.0 ns  thr=  49074.3 kops/s
+  read    t=1   p50=   666.7 ns  thr=   1285.9 kops/s
+  read    t=2   p50=   875.0 ns  thr=   2083.7 kops/s
+  read    t=4   p50=  3166.7 ns  thr=   1190.4 kops/s
+  read    t=8   p50=  5916.7 ns  thr=   1285.4 kops/s
+  read    t=16  p50= 19083.3 ns  thr=    835.9 kops/s
+  read    t=32  p50= 30250.0 ns  thr=    904.8 kops/s
+  extend  t=1   p50=244041.7 ns  thr=      3.1 kops/s
+  extend  t=2   p50=425208.3 ns  thr=      3.9 kops/s
+  extend  t=4   p50=680666.7 ns  thr=      4.9 kops/s
+  extend  t=8   p50=1459791.7 ns  thr=      4.8 kops/s
+  extend  t=16  p50=3166333.3 ns  thr=      4.3 kops/s
+  extend  t=32  p50=7069833.3 ns  thr=      3.9 kops/s
+  revoke t=1   p50= 11958.3 ns  p95=  20333.3 ns
+  revoke t=2   p50= 12375.0 ns  p95=  33666.7 ns
+  revoke t=4   p50= 11833.3 ns  p95=  21750.0 ns
+  revoke t=8   p50= 12125.0 ns  p95=  29333.3 ns
+  revoke t=16  p50= 11458.3 ns  p95=  62416.7 ns
+  revoke t=32  p50=247750.0 ns  p95=10386791.7 ns
+wrote experiments/results/e7_concurrency_sharded.json

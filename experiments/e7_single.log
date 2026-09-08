@@ -1,0 +1,8 @@
+E7 concurrency study, 32 cores
+  stat    t=1   p50=   250.0 ns  thr=   3501.1 kops/s
+  stat    t=2   p50=   333.3 ns  thr=   5190.1 kops/s
+  stat    t=4   p50=   541.7 ns  thr=   6684.5 kops/s
+  stat    t=8   p50=   958.3 ns  thr=   6431.7 kops/s
+  stat    t=16  p50=  2583.3 ns  thr=   5691.8 kops/s
+  stat    t=32  p50=  5166.7 ns  thr=   5178.0 kops/s
+  read    t=1   p50=   666.7 ns  thr=   1269.7 kops/s

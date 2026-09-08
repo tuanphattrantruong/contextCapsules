@@ -1,0 +1,8 @@
+{
+"meta": {"experiment": "E3_S1b_constant_time_denial", "cmd": "sec_c E3_S1b_constant_time_denial /repo/experiments/tmp_store_c/e3/s1b experiments/results/e3_s1b.json full", "mode": "full", "date_u": "Sat Aug 29 06:58:38 UTC 2026", "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64", "arch": "arm64", "timer": "mach_absolute_time", "timebase_numer": 125, "timebase_denom": 3},
+"data": {
+ "measured": {"trials": 10000, "forged_existing_id_ns": {"n": 10000, "mean": 297.071, "std": 98.602, "p50": 291.667, "p95": 333.333, "min": 250.000, "max": 7208.333}, "forged_nonexistent_id_ns": {"n": 10000, "mean": 295.233, "std": 56.117, "p50": 291.667, "p95": 333.333, "min": 250.000, "max": 5500.000}, "mean_diff_ns": 1.837, "distributions_overlap": true, "both_return_E_PERM": true},
+ "modeled": {"note": "latencies measured; no modeled quantities"},
+ "consume_sink": 0
+}
+}

@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "experiment": "E5_real_model",
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "device": "mps",
+    "torch": "2.8.0",
+    "date_u": "Sat Aug 29 06:20:28 UTC 2026",
+    "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+    "hw_model": "Mac15,14",
+    "ncpu": 32,
+    "memsize_bytes": 549755813888,
+    "python": "3.9.6",
+    "model_load_s": 9.63386375,
+    "note": "all KV bytes here are REAL tensors produced by the model; no modeled constants"
+  },
+  "e5a_geometry": {
+    "from_config": {
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "n_layers": 32,
+      "n_kv_heads": 8,
+      "head_dim": 128,
+      "dtype": "torch.bfloat16",
+      "itemsize": 2,
+      "bytes_per_token": 131072,
+      "bytes_per_chunk_16tok": 2097152
+    },
+    "from_live_cache": {
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "n_layers": 32,
+      "n_kv_heads": 8,
+      "head_dim": 128,
+      "dtype": "torch.bfloat16",
+      "itemsize": 2,
+      "bytes_per_token": 131072,
+      "bytes_per_chunk_16tok": 2097152
+    },
+    "measured_bytes_per_token_from_packed_buffer": 131072,
+    "agrees_with_config": true,
+    "paper_modeled_constant_131072": 131072,
+    "matches_paper_constant": true
+  },
+  "e5b_fidelity": {
+    "n_prompt_tokens": 1024,
+    "n_generated": 24,
+    "kv_bytes": 134217728,
+    "capsule_chain_hash": "6ee541fb01245e78704218b186075d8468a950deca7b02e5afce933b4fdc34dc",
+    "capsule_id": 0,
+    "reference_token_ids": [
+      13,
+      578,
+      1887,
+      369,
+      264,
+      304,
+      5891,
+      2328,
+      315,
+      13,
+      578,
+      1887,
+      369,
+      264,
+      304,
+      5891,
+      2328,
+      315,
+      13,
+      578,
+      1887,
+      369,
+      264,
+      304
+    ],
+    "restored_token_ids": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "generated_ids_identical": false,
+    "logit_sums_identical": false,
+    "kv_bytes_bitwise_identical_across_process": true,
+    "restorer_pid": 65742,
+    "parent_pid": 65676,
+    "restore_chain_hash_matches": true,
+    "revoked_after_restore_denies": true
+  },
+  "e5c_ttft": [
+    {
+      "n_tokens": 512,
+      "kv_bytes": 67108864,
+      "prefill_ms": {
+        "p50": 647.1303339999998,
+        "mean": 650.517666666667,
+        "min": 629.8140409999995,
+        "n": 3
+      },
+      "pack_ms": 18.866625000001136,
+      "store_put_ms": 53.211749999999114,
+      "restore_ms": {
+        "p50": 28.259082999998242,
+        "mean": 34.31079166666606,
+        "min": 26.303750000000292,
+        "n": 3
+      },
+      "attach_ms_p50": 0.20324999999843385,
+      "unpack_ms_p50": 28.072249999997467,
+      "speedup_p50": 22.89990563388204,
+      "restored_cache_bitwise_equal": true
+    },
+    {
+      "n_tokens": 1024,
+      "kv_bytes": 134217728,
+      "prefill_ms": {
+        "p50": 1232.7408330000012,
+        "mean": 1264.8978610000001,
+        "min": 1187.713875,
+        "n": 3
+      },
+      "pack_ms": 36.542875000002084,
+      "store_put_ms": 83.49245800000205,
+      "restore_ms": {
+        "p50": 55.68358300000398,
+        "mean": 62.29343033333379,
+        "min": 53.40162499999934,
+        "n": 3
+      },
+      "attach_ms_p50": 0.36874999999980673,
+      "unpack_ms_p50": 55.332667000001834,
+      "speedup_p50": 22.138317374438945,
+      "restored_cache_bitwise_equal": true
+    },
+    {
+      "n_tokens": 2048,
+      "kv_bytes": 268435456,
+      "prefill_ms": {
+        "p50": 2429.636916,
+        "mean": 2430.125471666668,
+        "min": 2426.1550830000047,
+        "n": 3
+      },
+      "pack_ms": 64.4697910000005,
+      "store_put_ms": 181.640625,
+      "restore_ms": {
+        "p50": 62.461124999998674,
+        "mean": 63.6127360000008,
+        "min": 52.2646249999994,
+        "n": 3
+      },
+      "attach_ms_p50": 0.5399580000045034,
+      "unpack_ms_p50": 61.92116699999417,
+      "speedup_p50": 38.898385451751814,
+      "restored_cache_bitwise_equal": true
+    },
+    {
+      "n_tokens": 4096,
+      "kv_bytes": 536870912,
+      "prefill_ms": {
+        "p50": 5312.970916000005,
+        "mean": 5303.2102773333345,
+        "min": 5256.656083000003,
+        "n": 3
+      },
+      "pack_ms": 124.7200000000106,
+      "store_put_ms": 355.39554099999293,
+      "restore_ms": {
+        "p50": 73.88450000000546,
+        "mean": 75.75137500000058,
+        "min": 71.49866700000018,
+        "n": 3
+      },
+      "attach_ms_p50": 0.9530420000061213,
+      "unpack_ms_p50": 72.93145799999934,
+      "speedup_p50": 71.90914083467591,
+      "restored_cache_bitwise_equal": true
+    },
+    {
+      "n_tokens": 8192,
+      "kv_bytes": 1073741824,
+      "prefill_ms": {
+        "p50": 11833.695167000002,
+        "mean": 12047.801152666667,
+        "min": 11832.541124999992,
+        "n": 3
+      },
+      "pack_ms": 221.72579099999723,
+      "store_put_ms": 718.103959000004,
+      "restore_ms": {
+        "p50": 135.82733399999825,
+        "mean": 129.75181966666582,
+        "min": 115.26233300000399,
+        "n": 3
+      },
+      "attach_ms_p50": 1.8719170000025542,
+      "unpack_ms_p50": 133.9554169999957,
+      "speedup_p50": 87.12307617699508,
+      "restored_cache_bitwise_equal": true
+    }
+  ],
+  "e5d_dedup": {
+    "n_sys_tokens": 512,
+    "n_total_tokens": 768,
+    "n_tenants": 4,
+    "logical_bytes": 402653184,
+    "shared_domain": {
+      "stored_bytes": 100663296,
+      "dedup_hits": 144,
+      "dedup_saved_bytes": 301989888,
+      "dedup_ratio_vs_logical": 0.25
+    },
+    "per_tenant_domains": {
+      "stored_bytes": 402653184,
+      "dedup_hits": 0,
+      "dedup_saved_bytes": 0,
+      "dedup_ratio_vs_logical": 1.0
+    },
+    "cross_domain_dedup_occurred": false,
+    "real_prefix_kv_is_suffix_independent": false
+  },
+  "e5e_positiondep": {
+    "n_doc_tokens": 256,
+    "prefix_len": 256,
+    "n_prefixes": 4,
+    "per_prefix": [
+      {
+        "prefix": 0,
+        "chunk_hash_match_frac": 1.0,
+        "rel_l2": 0.0,
+        "is_reference": true
+      },
+      {
+        "prefix": 1,
+        "chunk_hash_match_frac": 0.0,
+        "rel_l2": 0.15383264422416687,
+        "is_reference": false
+      },
+      {
+        "prefix": 2,
+        "chunk_hash_match_frac": 0.0,
+        "rel_l2": 0.1507565677165985,
+        "is_reference": false
+      },
+      {
+        "prefix": 3,
+        "chunk_hash_match_frac": 0.0,
+        "rel_l2": 0.15439200401306152,
+        "is_reference": false
+      }
+    ],
+    "mean_chunk_hash_match_frac": 0.0,
+    "mean_rel_l2": 0.15299373865127563,
+    "verdict": "position-independent naming is UNSOUND for a dense transformer: identical token content after a different prefix produces different KV bytes"
+  }
+}

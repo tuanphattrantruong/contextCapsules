@@ -1,0 +1,36 @@
+{
+  "experiment": "E14_concurrent_requests",
+  "date_u": "Mon Aug 31 19:09:50 UTC 2026",
+  "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+  "arch": "arm64",
+  "timer": "mach_absolute_time",
+  "timebase_numer": 125,
+  "timebase_denom": 3,
+  "model": "/repo/workloads/gguf/qwen2.5-0.5b-instruct-q8_0.gguf",
+  "streams": 4,
+  "reps_per_stream": 10,
+  "n_prompt": 512,
+  "engine_blob_bytes": 6298200,
+  "first_token_identical": true,
+  "arms": [
+    {
+      "name": "prefill",
+      "ttft_ms_p50": 393.153,
+      "ttft_ms_p95": 510.244,
+      "throughput_req_s": 9.778
+    },
+    {
+      "name": "native",
+      "ttft_ms_p50": 83.339,
+      "ttft_ms_p95": 110.754,
+      "throughput_req_s": 46.753
+    },
+    {
+      "name": "capsule",
+      "ttft_ms_p50": 73.978,
+      "ttft_ms_p95": 99.511,
+      "throughput_req_s": 55.904
+    }
+  ],
+  "scope": "shared model with independent contexts; no continuous batching or paged GPU block manager"
+}

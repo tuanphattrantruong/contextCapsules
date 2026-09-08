@@ -1,0 +1,11 @@
+{
+"meta": {"experiment": "E3_S1c_dedup_timing_channel", "cmd": "sec_c E3_S1c_dedup_timing_channel ../../experiments/tmp_store_c/e3/s1c ../../experiments/results/e3_s1c.json full", "mode": "full", "date_u": "Mon Aug 31 18:43:18 UTC 2026", "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64", "arch": "arm64", "timer": "mach_absolute_time", "timebase_numer": 125, "timebase_denom": 3},
+"data": {
+ "measured": {"trials_each": 500, "chunk_bytes": 2097152,
+  "normal": {"miss_ns": {"n": 500, "mean": 3287601.083, "std": 1304895.765, "p50": 3001208.333, "p95": 5260791.667, "min": 1946000.000, "max": 22193500.000}, "hit_ns": {"n": 500, "mean": 2968417.917, "std": 2237096.361, "p50": 2559250.000, "p95": 5049000.000, "min": 1621291.667, "max": 40260625.000}, "garbage_bytes": 0, "classifier_accuracy": 0.586000, "classifier_auc": 0.663488, "samples_for_95pct": null, "max_samples_tested": 32}, 
+  "paranoid": {"miss_ns": {"n": 500, "mean": 3930590.000, "std": 3156541.013, "p50": 3206208.333, "p95": 7153791.667, "min": 2024291.667, "max": 50996250.000}, "hit_ns": {"n": 500, "mean": 3820035.417, "std": 1844376.956, "p50": 3283458.333, "p95": 6957166.667, "min": 2123416.667, "max": 18496541.667}, "garbage_bytes": 1069547520, "classifier_accuracy": 0.488000, "classifier_auc": 0.476848, "samples_for_95pct": null, "max_samples_tested": 32},
+  "normal_hit_miss_gap_ns": 441958.333, "paranoid_hit_miss_gap_ns": 77250.000, "channel_exists_normal": true, "channel_reduced_paranoid": true, "channel_collapsed_paranoid": true},
+ "modeled": {"note": "paranoid cost = extra write bandwidth (garbage_bytes); latencies measured"},
+ "consume_sink": 0
+}
+}

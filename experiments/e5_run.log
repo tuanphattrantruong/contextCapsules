@@ -1,0 +1,21 @@
+/home/anon/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 80.04it/s]
+model loaded in 9.6s on mps
+[E5a] geometry
+  measured bytes/token = 131072 (paper constant 131072: True)
+[E5b] cross-process fidelity
+  identical generated ids: False | chain match: True | revoke denies: True
+[E5c] TTFT: prefill vs restore
+  n=512    prefill    647.1 ms  restore    28.3 ms  speedup  22.9x  exact=True
+  n=1024   prefill   1232.7 ms  restore    55.7 ms  speedup  22.1x  exact=True
+  n=2048   prefill   2429.6 ms  restore    62.5 ms  speedup  38.9x  exact=True
+  n=4096   prefill   5313.0 ms  restore    73.9 ms  speedup  71.9x  exact=True
+  n=8192   prefill  11833.7 ms  restore   135.8 ms  speedup  87.1x  exact=True
+[E5d] real-KV dedup
+  shared-domain stored/logical = 0.250 ; per-tenant = 1.000 ; cross-domain dedup: False
+[E5e] position dependence of real KV
+  mean chunk-hash match across prefixes = 0.0000 ; rel L2 = 0.153
+wrote experiments/results/e5_realmodel.json

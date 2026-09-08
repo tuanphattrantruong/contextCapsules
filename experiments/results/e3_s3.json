@@ -1,0 +1,7 @@
+{
+"meta": {"experiment": "E3_S3_seal_integrity", "cmd": "sec_c E3_S3_seal_integrity /repo/experiments/tmp_store_c/e3/s3 experiments/results/e3_s3.json full", "mode": "full", "date_u": "Sat Aug 29 06:58:41 UTC 2026", "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64", "arch": "arm64", "timer": "mach_absolute_time", "timebase_numer": 125, "timebase_denom": 3},
+"data": {
+ "measured": {"pass": true, "derive_rc": 0, "sharee_extend_rc": -1, "owner_extend_rc": -4, "attach_rc": 0, "read_rc": 0, "chain_hash_matches": true, "sharee_extend_is_PERM": true, "owner_extend_is_SEALED": true},
+ "modeled": {"note": "pass/fail integrity check; no timings"}
+}
+}

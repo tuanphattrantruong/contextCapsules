@@ -1,0 +1,4 @@
+E4 complete: 6 cells, 6.0s -> /repo/experiments/results/e4_eviction.json
+  budget=10%  lru_recompute=450931  lineage_recompute=450931  lineage_better=False
+  budget=25%  lru_recompute=316909  lineage_recompute=291110  lineage_better=True
+  budget=50%  lru_recompute=80846  lineage_recompute=69845  lineage_better=True

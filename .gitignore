@@ -1,0 +1,24 @@
+# build outputs
+*.o
+*.dylib
+src/libcapsule/test_capsule
+src/libcapsule/bench_micro
+src/libcapsule/bench_conc
+src/libcapsule/sec_c
+src/llamacap/llamacap
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# experiment scratch
+experiments/tmp_store_c/
+experiments/tmp_store_py/
+experiments/tmp_service/
+
+# model weights (see workloads/gguf/README.md)
+workloads/gguf/*.gguf
+
+# macOS
+.DS_Store

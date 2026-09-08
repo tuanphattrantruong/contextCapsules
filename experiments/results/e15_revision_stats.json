@@ -1,0 +1,254 @@
+{
+  "experiment": "E15_independent_process_timing_replication",
+  "independent_process_runs": 10,
+  "runs": [
+    {
+      "process_run": 0,
+      "read4k_checked_p50_ns": 708.333,
+      "read4k_unchecked_p50_ns": 416.667,
+      "checked_minus_unchecked_p50_ns": 291.666,
+      "durable_revoke_p50_ns": 63125.0,
+      "forged_existing_mean_ns": 329.208,
+      "forged_nonexistent_mean_ns": 324.708,
+      "existence_timing_mean_diff_ns": 4.5,
+      "both_return_eperm": true
+    },
+    {
+      "process_run": 1,
+      "read4k_checked_p50_ns": 750.0,
+      "read4k_unchecked_p50_ns": 416.667,
+      "checked_minus_unchecked_p50_ns": 333.333,
+      "durable_revoke_p50_ns": 60625.0,
+      "forged_existing_mean_ns": 316.25,
+      "forged_nonexistent_mean_ns": 319.292,
+      "existence_timing_mean_diff_ns": 3.042,
+      "both_return_eperm": true
+    },
+    {
+      "process_run": 2,
+      "read4k_checked_p50_ns": 708.333,
+      "read4k_unchecked_p50_ns": 416.667,
+      "checked_minus_unchecked_p50_ns": 291.666,
+      "durable_revoke_p50_ns": 60750.0,
+      "forged_existing_mean_ns": 339.25,
+      "forged_nonexistent_mean_ns": 320.083,
+      "existence_timing_mean_diff_ns": 19.167,
+      "both_return_eperm": true
+    },
+    {
+      "process_run": 3,
+      "read4k_checked_p50_ns": 708.333,
+      "read4k_unchecked_p50_ns": 416.667,
+      "checked_minus_unchecked_p50_ns": 291.666,
+      "durable_revoke_p50_ns": 64500.0,
+      "forged_existing_mean_ns": 318.708,
+      "forged_nonexistent_mean_ns": 321.167,
+      "existence_timing_mean_diff_ns": 2.458,
+      "both_return_eperm": true
+    },
+    {
+      "process_run": 4,
+      "read4k_checked_p50_ns": 708.333,
+      "read4k_unchecked_p50_ns": 416.667,
+      "checked_minus_unchecked_p50_ns": 291.666,
+      "durable_revoke_p50_ns": 63416.667,
+      "forged_existing_mean_ns": 324.208,
+      "forged_nonexistent_mean_ns": 325.0,
+      "existence_timing_mean_diff_ns": 0.792,
+      "both_return_eperm": true
+    },
+    {
+      "process_run": 5,
+      "read4k_checked_p50_ns": 791.667,
+      "read4k_unchecked_p50_ns": 416.667,
+      "checked_minus_unchecked_p50_ns": 375.00000000000006,
+      "durable_revoke_p50_ns": 55875.0,
+      "forged_existing_mean_ns": 319.083,
+      "forged_nonexistent_mean_ns": 319.542,
+      "existence_timing_mean_diff_ns": 0.458,
+      "both_return_eperm": true
+    },
+    {
+      "process_run": 6,
+      "read4k_checked_p50_ns": 708.333,
+      "read4k_unchecked_p50_ns": 416.667,
+      "checked_minus_unchecked_p50_ns": 291.666,
+      "durable_revoke_p50_ns": 63208.333,
+      "forged_existing_mean_ns": 313.875,
+      "forged_nonexistent_mean_ns": 305.292,
+      "existence_timing_mean_diff_ns": 8.583,
+      "both_return_eperm": true
+    },
+    {
+      "process_run": 7,
+      "read4k_checked_p50_ns": 750.0,
+      "read4k_unchecked_p50_ns": 416.667,
+      "checked_minus_unchecked_p50_ns": 333.333,
+      "durable_revoke_p50_ns": 55708.333,
+      "forged_existing_mean_ns": 319.958,
+      "forged_nonexistent_mean_ns": 322.917,
+      "existence_timing_mean_diff_ns": 2.958,
+      "both_return_eperm": true
+    },
+    {
+      "process_run": 8,
+      "read4k_checked_p50_ns": 708.333,
+      "read4k_unchecked_p50_ns": 416.667,
+      "checked_minus_unchecked_p50_ns": 291.666,
+      "durable_revoke_p50_ns": 74208.333,
+      "forged_existing_mean_ns": 323.917,
+      "forged_nonexistent_mean_ns": 324.417,
+      "existence_timing_mean_diff_ns": 0.5,
+      "both_return_eperm": true
+    },
+    {
+      "process_run": 9,
+      "read4k_checked_p50_ns": 708.333,
+      "read4k_unchecked_p50_ns": 416.667,
+      "checked_minus_unchecked_p50_ns": 291.666,
+      "durable_revoke_p50_ns": 79375.0,
+      "forged_existing_mean_ns": 320.083,
+      "forged_nonexistent_mean_ns": 321.417,
+      "existence_timing_mean_diff_ns": 1.333,
+      "both_return_eperm": true
+    }
+  ],
+  "summary": {
+    "read4k_checked_p50_ns": {
+      "median": 708.333,
+      "min": 708.333,
+      "max": 791.667,
+      "q1": 708.333,
+      "q3": 739.58325,
+      "values": [
+        708.333,
+        750.0,
+        708.333,
+        708.333,
+        708.333,
+        791.667,
+        708.333,
+        750.0,
+        708.333,
+        708.333
+      ]
+    },
+    "read4k_unchecked_p50_ns": {
+      "median": 416.667,
+      "min": 416.667,
+      "max": 416.667,
+      "q1": 416.667,
+      "q3": 416.667,
+      "values": [
+        416.667,
+        416.667,
+        416.667,
+        416.667,
+        416.667,
+        416.667,
+        416.667,
+        416.667,
+        416.667,
+        416.667
+      ]
+    },
+    "checked_minus_unchecked_p50_ns": {
+      "median": 291.666,
+      "min": 291.666,
+      "max": 375.00000000000006,
+      "q1": 291.666,
+      "q3": 322.91625,
+      "values": [
+        291.666,
+        333.333,
+        291.666,
+        291.666,
+        291.666,
+        375.00000000000006,
+        291.666,
+        333.333,
+        291.666,
+        291.666
+      ]
+    },
+    "durable_revoke_p50_ns": {
+      "median": 63166.6665,
+      "min": 55708.333,
+      "max": 79375.0,
+      "q1": 60656.25,
+      "q3": 64229.166750000004,
+      "values": [
+        63125.0,
+        60625.0,
+        60750.0,
+        64500.0,
+        63416.667,
+        55875.0,
+        63208.333,
+        55708.333,
+        74208.333,
+        79375.0
+      ]
+    },
+    "forged_existing_mean_ns": {
+      "median": 320.0205,
+      "min": 313.875,
+      "max": 339.25,
+      "q1": 318.80175,
+      "q3": 324.13525,
+      "values": [
+        329.208,
+        316.25,
+        339.25,
+        318.708,
+        324.208,
+        319.083,
+        313.875,
+        319.958,
+        323.917,
+        320.083
+      ]
+    },
+    "forged_nonexistent_mean_ns": {
+      "median": 321.292,
+      "min": 305.292,
+      "max": 325.0,
+      "q1": 319.67725,
+      "q3": 324.042,
+      "values": [
+        324.708,
+        319.292,
+        320.083,
+        321.167,
+        325.0,
+        319.542,
+        305.292,
+        322.917,
+        324.417,
+        321.417
+      ]
+    },
+    "existence_timing_mean_diff_ns": {
+      "median": 2.708,
+      "min": 0.458,
+      "max": 19.167,
+      "q1": 0.9272500000000001,
+      "q3": 4.1355,
+      "values": [
+        4.5,
+        3.042,
+        19.167,
+        2.458,
+        0.792,
+        0.458,
+        8.583,
+        2.958,
+        0.5,
+        1.333
+      ]
+    }
+  },
+  "all_forged_caps_return_eperm": true,
+  "protocol": "10 fresh processes and fresh stores; quick mode within-process distributions; report cross-process median/IQR/min/max",
+  "scope": "Apple M3 Ultra/macOS arm64; quiet-host but unpinned; no Linux/x86 transfer claim"
+}

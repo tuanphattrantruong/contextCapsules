@@ -1,0 +1,11 @@
+### waiting for any e2b-ext to finish
+[E1 run 1 start] load:  47.82 52.65 32.92
+[E1 run 1 end] load:  36.54 49.33 32.51
+[E1 run 2 start] load:  36.54 49.33 32.51
+[E1 run 2 end] load:  30.60 46.47 32.14
+[E7 run 1 start] load:  30.60 46.47 32.14
+[E7 run 1 end] load:  33.52 46.34 32.35
+[E7 run 2 start] load:  33.52 46.34 32.35
+[E7 run 2 end] load:  30.14 44.72 32.09
+### E3 security studies (C parts + merge)
+[E3 start] load:  30.14 44.72 32.09

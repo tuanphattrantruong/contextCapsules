@@ -1,0 +1,11 @@
+{
+  "experiment": "E11_isolated_service_repeat_summary",
+  "runs": ["e11_service.json", "e11_service_run3.json"],
+  "security_passed_runs": 2,
+  "stat_rpc_trials_per_run": 10000,
+  "stat_rpc_median_us_range": [26.5, 32.833],
+  "stat_rpc_p99_us_range": [38.666, 41.666],
+  "read_4k_rpc_trials_per_run": 1000,
+  "read_4k_rpc_median_us_range": [46.833, 53.5],
+  "read_4k_rpc_p99_us_range": [71.5, 88.875]
+}

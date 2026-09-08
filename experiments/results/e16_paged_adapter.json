@@ -1,0 +1,33 @@
+{
+  "experiment": "E16_paged_block_adapter",
+  "configuration": {
+    "blocks": 512,
+    "block_bytes": 16384,
+    "logical_state_mib": 8.0,
+    "iterations": 300,
+    "workers": 8,
+    "operations_per_worker": 500
+  },
+  "measured": {
+    "attach_release_p50_us": 209.5,
+    "attach_release_p95_us": 246.63750000000005,
+    "materialize_copy_p50_us": 400.9375,
+    "materialize_copy_p95_us": 948.10835,
+    "copy_over_attach_p50": 1.9137828162291168,
+    "concurrent_operations": 4000,
+    "concurrent_ops_per_s": 1248.4676682380345
+  },
+  "correctness": {
+    "thread_errors": [],
+    "cow_parent_unchanged": true,
+    "unauthorized_or_revoked_denied": 3,
+    "expected_denials": 3,
+    "post_destroy": {
+      "slots": 513,
+      "live_blocks": 0,
+      "free_slots": 513,
+      "references": 0
+    }
+  },
+  "scope": "CPU allocator-metadata prototype; measures handle-vector attach/refcount/COW, not GPU DMA or production scheduling"
+}

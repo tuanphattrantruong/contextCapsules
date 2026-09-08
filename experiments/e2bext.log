@@ -1,0 +1,39 @@
+/repo/experiments/run_e2b_ext.py:49: SyntaxWarning: invalid escape sequence '\_'
+  position-chained variant emits (base.\_replay_oplog predates it)."""
+  ok  capsule          T=4   f=0.25 pl=0.00 seed=1  stored=637468672 hits=29435
+  ok  capsule          T=4   f=0.25 pl=0.05 seed=1  stored=637796352 hits=29472
+  ok  capsule          T=4   f=0.25 pl=0.15 seed=1  stored=639434752 hits=29102
+  ok  capsule          T=4   f=0.75 pl=0.00 seed=1  stored=657981440 hits=29036
+  ok  capsule          T=4   f=0.75 pl=0.05 seed=1  stored=652115968 hits=28920
+  ok  capsule          T=4   f=0.75 pl=0.15 seed=1  stored=653934592 hits=28777
+  ok  capsule          T=16  f=0.25 pl=0.00 seed=1  stored=723664896 hits=25769
+  ok  capsule          T=16  f=0.25 pl=0.05 seed=1  stored=718864384 hits=25826
+  ok  capsule          T=16  f=0.25 pl=0.15 seed=1  stored=713048064 hits=24789
+  ok  capsule          T=16  f=0.75 pl=0.00 seed=1  stored=691978240 hits=27004
+  ok  capsule          T=16  f=0.75 pl=0.05 seed=1  stored=697434112 hits=26805
+  ok  capsule          T=16  f=0.75 pl=0.15 seed=1  stored=696745984 hits=25887
+  ok  capsule          T=64  f=0.25 pl=0.00 seed=1  stored=705495040 hits=21365
+  ok  capsule          T=64  f=0.25 pl=0.05 seed=1  stored=759431168 hits=22914
+  ok  capsule          T=64  f=0.25 pl=0.15 seed=1  stored=776077312 hits=23099
+  ok  capsule          T=64  f=0.75 pl=0.00 seed=1  stored=669171712 hits=24069
+  ok  capsule          T=64  f=0.75 pl=0.05 seed=1  stored=719175680 hits=24993
+  ok  capsule          T=64  f=0.75 pl=0.15 seed=1  stored=728547328 hits=25509
+  ok  capsule-poschain T=4   f=0.25 pl=0.00 seed=1  stored=734003200 hits=23543
+  ok  capsule-poschain T=4   f=0.25 pl=0.05 seed=1  stored=737591296 hits=23381
+  ok  capsule-poschain T=4   f=0.25 pl=0.15 seed=1  stored=734412800 hits=23305
+  ok  capsule-poschain T=4   f=0.75 pl=0.00 seed=1  stored=703381504 hits=26265
+  ok  capsule-poschain T=4   f=0.75 pl=0.05 seed=1  stored=698007552 hits=26119
+  ok  capsule-poschain T=4   f=0.75 pl=0.15 seed=1  stored=699088896 hits=26021
+  ok  capsule-poschain T=16  f=0.25 pl=0.00 seed=1  stored=799916032 hits=21115
+  ok  capsule-poschain T=16  f=0.25 pl=0.05 seed=1  stored=795672576 hits=21138
+  ok  capsule-poschain T=16  f=0.25 pl=0.15 seed=1  stored=785104896 hits=20391
+  ok  capsule-poschain T=16  f=0.75 pl=0.00 seed=1  stored=724631552 hits=25011
+  ok  capsule-poschain T=16  f=0.75 pl=0.05 seed=1  stored=727908352 hits=24945
+  ok  capsule-poschain T=16  f=0.75 pl=0.15 seed=1  stored=723156992 hits=24275
+  ok  capsule-poschain T=64  f=0.25 pl=0.00 seed=1  stored=740999168 hits=19198
+  ok  capsule-poschain T=64  f=0.25 pl=0.05 seed=1  stored=801243136 hits=20362
+  ok  capsule-poschain T=64  f=0.25 pl=0.15 seed=1  stored=816676864 hits=20621
+  ok  capsule-poschain T=64  f=0.75 pl=0.00 seed=1  stored=681705472 hits=23304
+  ok  capsule-poschain T=64  f=0.75 pl=0.05 seed=1  stored=732348416 hits=24189
+  ok  capsule-poschain T=64  f=0.75 pl=0.15 seed=1  stored=741949440 hits=24691
+E2b-ext: 36/36 cells counter-exact, 132.4s -> /repo/experiments/results/e2b_ext_validation.json

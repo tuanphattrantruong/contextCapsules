@@ -1,0 +1,6 @@
+S1b: overlap=1 both_perm=1 -> experiments/results/e3_s1b.json
+S1c: channel_exists=1 collapsed=1 -> experiments/results/e3_s1c.json
+S2: 50 trials x 4 readers -> experiments/results/e3_s2.json
+S3: pass=1 -> experiments/results/e3_s3.json
+S1a: prefix confirmed 6/6 (2265 probes), capsule confirmed 0/6 (denied 512) -> /repo/experiments/results/e3_s1a.json
+E3 merge: present=['s1a', 's1b', 's1c', 's2', 's3'] missing=[] -> /repo/experiments/results/e3_security.json

@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "experiment": "E11_isolated_service",
+    "machine": "macOS-26.5.2-arm64-arm-64bit",
+    "mode": "quick",
+    "python": "3.9.6",
+    "service_command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "/repo/src/service/capsuled.py",
+      "serve",
+      "--store",
+      "/repo/experiments/tmp_service/store",
+      "--socket",
+      "/repo/experiments/tmp_service/capsuled.sock",
+      "--principals",
+      "/repo/experiments/tmp_service/principals.json"
+    ]
+  },
+  "performance": {
+    "read_4k_rpc_trials": 50,
+    "read_4k_rpc_us": {
+      "mean": 47.98082,
+      "median": 48.4795,
+      "p99": 54.292
+    },
+    "stat_rpc_trials": 500,
+    "stat_rpc_us": {
+      "mean": 20.284842,
+      "median": 19.5,
+      "p99": 31.166
+    }
+  },
+  "security": {
+    "delegated_read_matches": true,
+    "foreign_domain_create_code": -101,
+    "forged_capability_code": -1,
+    "post_revoke_code": -3,
+    "sandbox_bypass_probe": {
+      "available": true,
+      "passed": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"direct_errno\": 1, \"direct_secret_read\": false, \"mediated_stat_code\": 0}"
+    }
+  }
+}

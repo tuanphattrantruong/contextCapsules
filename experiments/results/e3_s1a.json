@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "experiment": "E3_S1a_hit_oracle",
+    "date_u": "Sat Aug 29 06:58:42 UTC 2026",
+    "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+    "arch": "arm64",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python_version": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "timer": "time.perf_counter_ns (Python monotonic ns)",
+    "cmd": "python experiments/run_e3_s1.py",
+    "content_note": "no git; content bytes for real-C runs derived from hashlib.sha256-seeded numpy RNG (stable across runs)",
+    "attack_params": {
+      "alphabet_V": 512,
+      "secret_blocks": 6,
+      "secret_seed": 1234
+    },
+    "note": "block-granular prefix-cache probing; timings measured on-machine"
+  },
+  "data": {
+    "measured": {
+      "prefix_cache_unprotected": {
+        "probes": 2265,
+        "confirmed_blocks": 6,
+        "secret_blocks": 6,
+        "recovered_exactly": true,
+        "hit_timing_ns": {
+          "n": 6,
+          "mean": 132.16666666666666,
+          "std": 73.83182842710106,
+          "p50": 125,
+          "p95": 292,
+          "min": 83,
+          "max": 292
+        },
+        "miss_timing_ns": {
+          "n": 2259,
+          "mean": 50.688800354139,
+          "std": 22.8974872212799,
+          "p50": 42,
+          "p95": 83,
+          "min": 0,
+          "max": 500
+        }
+      },
+      "capsule_protected": {
+        "probes": 512,
+        "denied_attaches": 512,
+        "observable_hits": 0,
+        "confirmed_blocks": 0,
+        "secret_blocks": 6,
+        "recovered_exactly": false,
+        "denied_timing_ns": {
+          "n": 512,
+          "mean": 49.359375,
+          "std": 19.938081643161535,
+          "p50": 42,
+          "p95": 83,
+          "min": 0,
+          "max": 125
+        }
+      },
+      "summary": {
+        "prefix_confirmed_blocks": 6,
+        "capsule_confirmed_blocks": 0,
+        "leak_eliminated": true
+      }
+    },
+    "modeled": {
+      "note": "no modeled quantities in S1a; all leaves measured"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+  conversation         cmr=10  T=4    nosh=0.0000 pref=0.3734 part=0.3632 safe=0.3734 caps=0.3734
+  conversation         cmr=10  T=16   nosh=0.0000 pref=0.3734 part=0.3527 safe=0.3734 caps=0.3734
+  conversation         cmr=10  T=64   nosh=0.0000 pref=0.3734 part=0.3471 safe=0.3734 caps=0.3734
+  conversation         cmr=50  T=4    nosh=0.0000 pref=0.3734 part=0.3734 safe=0.3734 caps=0.3734
+  conversation         cmr=50  T=16   nosh=0.0000 pref=0.3734 part=0.3733 safe=0.3734 caps=0.3734
+  conversation         cmr=50  T=64   nosh=0.0000 pref=0.3734 part=0.3732 safe=0.3734 caps=0.3734
+  toolagent            cmr=10  T=4    nosh=0.0000 pref=0.5701 part=0.5633 safe=0.5701 caps=0.5701
+  toolagent            cmr=10  T=16   nosh=0.0000 pref=0.5701 part=0.5551 safe=0.5701 caps=0.5701
+  toolagent            cmr=10  T=64   nosh=0.0000 pref=0.5701 part=0.5488 safe=0.5701 caps=0.5701
+  toolagent            cmr=50  T=4    nosh=0.0000 pref=0.5701 part=0.5700 safe=0.5701 caps=0.5701
+  toolagent            cmr=50  T=16   nosh=0.0000 pref=0.5701 part=0.5694 safe=0.5701 caps=0.5701
+  toolagent            cmr=50  T=64   nosh=0.0000 pref=0.5701 part=0.5673 safe=0.5701 caps=0.5701
+  synthetic-mooncake   cmr=10  T=4    nosh=0.0000 pref=0.6510 part=0.6219 safe=0.6510 caps=0.6510
+  synthetic-mooncake   cmr=10  T=16   nosh=0.0000 pref=0.6510 part=0.5840 safe=0.6510 caps=0.6510
+  synthetic-mooncake   cmr=10  T=64   nosh=0.0000 pref=0.6510 part=0.5679 safe=0.6510 caps=0.6510
+  synthetic-mooncake   cmr=50  T=4    nosh=0.0000 pref=0.6510 part=0.6510 safe=0.6510 caps=0.6510
+  synthetic-mooncake   cmr=50  T=16   nosh=0.0000 pref=0.6510 part=0.6510 safe=0.6510 caps=0.6510
+  synthetic-mooncake   cmr=50  T=64   nosh=0.0000 pref=0.6510 part=0.6510 safe=0.6510 caps=0.6510
+E8 complete: 90 cells, 205.5s -> /repo/experiments/results/e8_real_traces.json

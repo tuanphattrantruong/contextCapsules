@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "experiment": "E9_multimodel",
+    "device": "mps",
+    "lengths": [
+      512,
+      1024,
+      2048
+    ],
+    "reps": 2,
+    "torch": "2.8.0",
+    "date_u": "Sat Aug 29 07:27:56 UTC 2026",
+    "hw_model": "Mac15,14",
+    "note": "all KV bytes are real tensors; no modeled constants"
+  },
+  "models": [
+    {
+      "model": "HuggingFaceTB/SmolLM2-360M",
+      "device": "mps",
+      "load_s": 4.698632207999999,
+      "geometry": {
+        "model_id": "HuggingFaceTB/SmolLM2-360M",
+        "n_layers": 32,
+        "n_kv_heads": 5,
+        "head_dim": 64,
+        "dtype": "torch.bfloat16",
+        "itemsize": 2,
+        "bytes_per_token": 40960,
+        "bytes_per_chunk_16tok": 655360
+      },
+      "bytes_per_token": 40960,
+      "geometry_agrees_with_config": true,
+      "restore": [
+        {
+          "n_tokens": 512,
+          "kv_bytes": 20971520,
+          "prefill_ms_p50": 122.62885399999979,
+          "restore_ms_p50": 35.35524999999984,
+          "speedup_p50": 3.4684765063180247,
+          "bitwise_equal": true
+        },
+        {
+          "n_tokens": 1024,
+          "kv_bytes": 41943040,
+          "prefill_ms_p50": 185.6219794999996,
+          "restore_ms_p50": 37.98283350000009,
+          "speedup_p50": 4.886996634940338,
+          "bitwise_equal": true
+        },
+        {
+          "n_tokens": 2048,
+          "kv_bytes": 83886080,
+          "prefill_ms_p50": 311.42697950000024,
+          "restore_ms_p50": 45.1876664999995,
+          "speedup_p50": 6.891857969696304,
+          "bitwise_equal": true
+        }
+      ],
+      "positiondep": {
+        "mean_chunk_hash_match_frac": 0.0,
+        "mean_rel_l2": 0.15133173018693924
+      }
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "device": "mps",
+      "error": "OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.\nCheck your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'."
+    },
+    {
+      "model": "allenai/OLMo-2-0425-1B",
+      "device": "mps",
+      "load_s": 2.437462334000001,
+      "geometry": {
+        "model_id": "allenai/OLMo-2-0425-1B",
+        "n_layers": 16,
+        "n_kv_heads": 16,
+        "head_dim": 128,
+        "dtype": "torch.bfloat16",
+        "itemsize": 2,
+        "bytes_per_token": 131072,
+        "bytes_per_chunk_16tok": 2097152
+      },
+      "bytes_per_token": 131072,
+      "geometry_agrees_with_config": true,
+      "restore": [
+        {
+          "n_tokens": 512,
+          "kv_bytes": 67108864,
+          "prefill_ms_p50": 174.7975834999993,
+          "restore_ms_p50": 26.555458000000698,
+          "speedup_p50": 6.582359961556479,
+          "bitwise_equal": true
+        },
+        {
+          "n_tokens": 1024,
+          "kv_bytes": 134217728,
+          "prefill_ms_p50": 303.3505000000005,
+          "restore_ms_p50": 40.3650209999995,
+          "speedup_p50": 7.515182514088232,
+          "bitwise_equal": true
+        },
+        {
+          "n_tokens": 2048,
+          "kv_bytes": 268435456,
+          "prefill_ms_p50": 609.2672085000004,
+          "restore_ms_p50": 39.313145499999536,
+          "speedup_p50": 15.497798528993505,
+          "bitwise_equal": true
+        }
+      ],
+      "positiondep": {
+        "mean_chunk_hash_match_frac": 0.0,
+        "mean_rel_l2": 0.21514739841222763
+      }
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "device": "mps",
+      "load_s": 1.8246000420000001,
+      "geometry": {
+        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "n_layers": 28,
+        "n_kv_heads": 2,
+        "head_dim": 128,
+        "dtype": "torch.bfloat16",
+        "itemsize": 2,
+        "bytes_per_token": 28672,
+        "bytes_per_chunk_16tok": 458752
+      },
+      "bytes_per_token": 28672,
+      "geometry_agrees_with_config": true,
+      "restore": [
+        {
+          "n_tokens": 512,
+          "kv_bytes": 14680064,
+          "prefill_ms_p50": 204.2776460000013,
+          "restore_ms_p50": 41.72291600000122,
+          "speedup_p50": 4.896053909558846,
+          "bitwise_equal": true
+        },
+        {
+          "n_tokens": 1024,
+          "kv_bytes": 29360128,
+          "prefill_ms_p50": 372.9872285000013,
+          "restore_ms_p50": 30.994312000002466,
+          "speedup_p50": 12.03405413548046,
+          "bitwise_equal": true
+        },
+        {
+          "n_tokens": 2048,
+          "kv_bytes": 58720256,
+          "prefill_ms_p50": 676.0906040000004,
+          "restore_ms_p50": 36.848687499999144,
+          "speedup_p50": 18.347752657405128,
+          "bitwise_equal": true
+        }
+      ],
+      "positiondep": {
+        "mean_chunk_hash_match_frac": 0.0,
+        "mean_rel_l2": 0.033607661724090576
+      }
+    },
+    {
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "device": "mps",
+      "load_s": 7.061863958,
+      "geometry": {
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "n_layers": 28,
+        "n_kv_heads": 4,
+        "head_dim": 128,
+        "dtype": "torch.bfloat16",
+        "itemsize": 2,
+        "bytes_per_token": 57344,
+        "bytes_per_chunk_16tok": 917504
+      },
+      "bytes_per_token": 57344,
+      "geometry_agrees_with_config": true,
+      "restore": [
+        {
+          "n_tokens": 512,
+          "kv_bytes": 29360128,
+          "prefill_ms_p50": 689.9551040000027,
+          "restore_ms_p50": 47.471666500001675,
+          "speedup_p50": 14.534040088943968,
+          "bitwise_equal": true
+        },
+        {
+          "n_tokens": 1024,
+          "kv_bytes": 58720256,
+          "prefill_ms_p50": 1239.0774169999972,
+          "restore_ms_p50": 49.26314600000126,
+          "speedup_p50": 25.152218597650375,
+          "bitwise_equal": true
+        },
+        {
+          "n_tokens": 2048,
+          "kv_bytes": 117440512,
+          "prefill_ms_p50": 2466.1287914999975,
+          "restore_ms_p50": 67.98541649999734,
+          "speedup_p50": 36.27437939576488,
+          "bitwise_equal": true
+        }
+      ],
+      "positiondep": {
+        "mean_chunk_hash_match_frac": 0.0,
+        "mean_rel_l2": 0.04923030734062195
+      }
+    },
+    {
+      "model": "google/gemma-3-1b-pt",
+      "device": "mps",
+      "error": "RuntimeError: shape '[512, 26, 2, 1, 256]' is invalid for input of size 6802432"
+    }
+  ]
+}

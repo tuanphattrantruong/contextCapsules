@@ -1,0 +1,330 @@
+{
+  "meta": {
+    "experiment": "E3_security_merged",
+    "date_u": "Mon Aug 31 18:43:20 UTC 2026",
+    "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+    "arch": "arm64",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python_version": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "timer": "time.perf_counter_ns (Python monotonic ns)",
+    "cmd": "python ../../experiments/run_e3_s1.py --merge",
+    "content_note": "no git; content bytes for real-C runs derived from hashlib.sha256-seeded numpy RNG (stable across runs)",
+    "parts_present": [
+      "s1a",
+      "s1b",
+      "s1c",
+      "s2",
+      "s3"
+    ],
+    "parts_missing": [],
+    "note": "s1a from Python (this script); s1b/s1c/s2/s3 from package 1 sec_c"
+  },
+  "data": {
+    "measured": {
+      "s1a": {
+        "meta": {
+          "experiment": "E3_S1a_hit_oracle",
+          "date_u": "Sat Aug 29 06:58:42 UTC 2026",
+          "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+          "arch": "arm64",
+          "platform": "macOS-26.5.2-arm64-arm-64bit",
+          "python_version": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+          "timer": "time.perf_counter_ns (Python monotonic ns)",
+          "cmd": "python experiments/run_e3_s1.py",
+          "content_note": "no git; content bytes for real-C runs derived from hashlib.sha256-seeded numpy RNG (stable across runs)",
+          "attack_params": {
+            "alphabet_V": 512,
+            "secret_blocks": 6,
+            "secret_seed": 1234
+          },
+          "note": "block-granular prefix-cache probing; timings measured on-machine"
+        },
+        "data": {
+          "measured": {
+            "prefix_cache_unprotected": {
+              "probes": 2265,
+              "confirmed_blocks": 6,
+              "secret_blocks": 6,
+              "recovered_exactly": true,
+              "hit_timing_ns": {
+                "n": 6,
+                "mean": 132.16666666666666,
+                "std": 73.83182842710106,
+                "p50": 125,
+                "p95": 292,
+                "min": 83,
+                "max": 292
+              },
+              "miss_timing_ns": {
+                "n": 2259,
+                "mean": 50.688800354139,
+                "std": 22.8974872212799,
+                "p50": 42,
+                "p95": 83,
+                "min": 0,
+                "max": 500
+              }
+            },
+            "capsule_protected": {
+              "probes": 512,
+              "denied_attaches": 512,
+              "observable_hits": 0,
+              "confirmed_blocks": 0,
+              "secret_blocks": 6,
+              "recovered_exactly": false,
+              "denied_timing_ns": {
+                "n": 512,
+                "mean": 49.359375,
+                "std": 19.938081643161535,
+                "p50": 42,
+                "p95": 83,
+                "min": 0,
+                "max": 125
+              }
+            },
+            "summary": {
+              "prefix_confirmed_blocks": 6,
+              "capsule_confirmed_blocks": 0,
+              "leak_eliminated": true
+            }
+          },
+          "modeled": {
+            "note": "no modeled quantities in S1a; all leaves measured"
+          }
+        }
+      },
+      "s1b": {
+        "meta": {
+          "experiment": "E3_S1b_constant_time_denial",
+          "cmd": "sec_c E3_S1b_constant_time_denial /repo/experiments/tmp_store_c/e3/s1b experiments/results/e3_s1b.json full",
+          "mode": "full",
+          "date_u": "Sat Aug 29 06:58:38 UTC 2026",
+          "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+          "arch": "arm64",
+          "timer": "mach_absolute_time",
+          "timebase_numer": 125,
+          "timebase_denom": 3
+        },
+        "data": {
+          "measured": {
+            "trials": 10000,
+            "forged_existing_id_ns": {
+              "n": 10000,
+              "mean": 297.071,
+              "std": 98.602,
+              "p50": 291.667,
+              "p95": 333.333,
+              "min": 250.0,
+              "max": 7208.333
+            },
+            "forged_nonexistent_id_ns": {
+              "n": 10000,
+              "mean": 295.233,
+              "std": 56.117,
+              "p50": 291.667,
+              "p95": 333.333,
+              "min": 250.0,
+              "max": 5500.0
+            },
+            "mean_diff_ns": 1.837,
+            "distributions_overlap": true,
+            "both_return_E_PERM": true
+          },
+          "modeled": {
+            "note": "latencies measured; no modeled quantities"
+          },
+          "consume_sink": 0
+        }
+      },
+      "s1c": {
+        "meta": {
+          "experiment": "E3_S1c_dedup_timing_channel",
+          "cmd": "sec_c E3_S1c_dedup_timing_channel ../../experiments/tmp_store_c/e3/s1c ../../experiments/results/e3_s1c.json full",
+          "mode": "full",
+          "date_u": "Mon Aug 31 18:43:18 UTC 2026",
+          "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+          "arch": "arm64",
+          "timer": "mach_absolute_time",
+          "timebase_numer": 125,
+          "timebase_denom": 3
+        },
+        "data": {
+          "measured": {
+            "trials_each": 500,
+            "chunk_bytes": 2097152,
+            "normal": {
+              "miss_ns": {
+                "n": 500,
+                "mean": 3287601.083,
+                "std": 1304895.765,
+                "p50": 3001208.333,
+                "p95": 5260791.667,
+                "min": 1946000.0,
+                "max": 22193500.0
+              },
+              "hit_ns": {
+                "n": 500,
+                "mean": 2968417.917,
+                "std": 2237096.361,
+                "p50": 2559250.0,
+                "p95": 5049000.0,
+                "min": 1621291.667,
+                "max": 40260625.0
+              },
+              "garbage_bytes": 0,
+              "classifier_accuracy": 0.586,
+              "classifier_auc": 0.663488,
+              "samples_for_95pct": null,
+              "max_samples_tested": 32
+            },
+            "paranoid": {
+              "miss_ns": {
+                "n": 500,
+                "mean": 3930590.0,
+                "std": 3156541.013,
+                "p50": 3206208.333,
+                "p95": 7153791.667,
+                "min": 2024291.667,
+                "max": 50996250.0
+              },
+              "hit_ns": {
+                "n": 500,
+                "mean": 3820035.417,
+                "std": 1844376.956,
+                "p50": 3283458.333,
+                "p95": 6957166.667,
+                "min": 2123416.667,
+                "max": 18496541.667
+              },
+              "garbage_bytes": 1069547520,
+              "classifier_accuracy": 0.488,
+              "classifier_auc": 0.476848,
+              "samples_for_95pct": null,
+              "max_samples_tested": 32
+            },
+            "normal_hit_miss_gap_ns": 441958.333,
+            "paranoid_hit_miss_gap_ns": 77250.0,
+            "channel_exists_normal": true,
+            "channel_reduced_paranoid": true,
+            "channel_collapsed_paranoid": true
+          },
+          "modeled": {
+            "note": "paranoid cost = extra write bandwidth (garbage_bytes); latencies measured"
+          },
+          "consume_sink": 0
+        }
+      },
+      "s2": {
+        "meta": {
+          "experiment": "E3_S2_revocation_propagation",
+          "cmd": "sec_c E3_S2_revocation_propagation /repo/experiments/tmp_store_c/e3/s2 experiments/results/e3_s2.json full",
+          "mode": "full",
+          "date_u": "Sat Aug 29 06:58:41 UTC 2026",
+          "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+          "arch": "arm64",
+          "timer": "mach_absolute_time",
+          "timebase_numer": 125,
+          "timebase_denom": 3
+        },
+        "data": {
+          "measured": {
+            "trials": 50,
+            "readers": 4,
+            "per_reader": [
+              {
+                "reader": 0,
+                "latency_ns": {
+                  "n": 50,
+                  "mean": 7708.333,
+                  "std": 3795.117,
+                  "p50": 6500.0,
+                  "p95": 15166.667,
+                  "min": 4000.0,
+                  "max": 23583.333
+                }
+              },
+              {
+                "reader": 1,
+                "latency_ns": {
+                  "n": 50,
+                  "mean": 8040.0,
+                  "std": 3528.928,
+                  "p50": 6791.667,
+                  "p95": 15166.667,
+                  "min": 3291.667,
+                  "max": 17500.0
+                }
+              },
+              {
+                "reader": 2,
+                "latency_ns": {
+                  "n": 50,
+                  "mean": 8090.0,
+                  "std": 4574.259,
+                  "p50": 6791.667,
+                  "p95": 15958.333,
+                  "min": 3625.0,
+                  "max": 31041.667
+                }
+              },
+              {
+                "reader": 3,
+                "latency_ns": {
+                  "n": 50,
+                  "mean": 8298.333,
+                  "std": 3777.118,
+                  "p50": 7000.0,
+                  "p95": 16125.0,
+                  "min": 3875.0,
+                  "max": 22458.333
+                }
+              }
+            ],
+            "pooled_latency_ns": {
+              "n": 200,
+              "mean": 8034.167,
+              "std": 3944.167,
+              "p50": 6750.0,
+              "p95": 15958.333,
+              "min": 3291.667,
+              "max": 31041.667
+            }
+          },
+          "modeled": {
+            "note": "cross-process latencies measured via mach_absolute_time global clock"
+          },
+          "consume_sink": 0
+        }
+      },
+      "s3": {
+        "meta": {
+          "experiment": "E3_S3_seal_integrity",
+          "cmd": "sec_c E3_S3_seal_integrity /repo/experiments/tmp_store_c/e3/s3 experiments/results/e3_s3.json full",
+          "mode": "full",
+          "date_u": "Sat Aug 29 06:58:41 UTC 2026",
+          "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+          "arch": "arm64",
+          "timer": "mach_absolute_time",
+          "timebase_numer": 125,
+          "timebase_denom": 3
+        },
+        "data": {
+          "measured": {
+            "pass": true,
+            "derive_rc": 0,
+            "sharee_extend_rc": -1,
+            "owner_extend_rc": -4,
+            "attach_rc": 0,
+            "read_rc": 0,
+            "chain_hash_matches": true,
+            "sharee_extend_is_PERM": true,
+            "owner_extend_is_SEALED": true
+          },
+          "modeled": {
+            "note": "pass/fail integrity check; no timings"
+          }
+        }
+      }
+    }
+  }
+}

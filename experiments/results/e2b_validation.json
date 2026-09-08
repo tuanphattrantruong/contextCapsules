@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "experiment": "E2b_validation",
+    "date_u": "Sat Aug 29 06:59:06 UTC 2026",
+    "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+    "arch": "arm64",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python_version": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "timer": "time.perf_counter_ns (Python monotonic ns)",
+    "cmd": "python experiments/run_e2b.py",
+    "content_note": "no git; content bytes for real-C runs derived from hashlib.sha256-seeded numpy RNG (stable across runs)",
+    "config": {
+      "T": 16,
+      "f": 0.75,
+      "p_leakdup": 0.05,
+      "seed": 1,
+      "n_requests": 500,
+      "scaled_bpt": 1024,
+      "chunk_nbytes": 16384
+    },
+    "trace_events": 1000,
+    "op_log_len": 1000,
+    "note": "SCALED_BPT geometry; real pseudorandom chunk bytes keyed by content"
+  },
+  "data": {
+    "measured": {
+      "pass": true,
+      "checks": {
+        "stored_bytes": {
+          "mirror": 298893312,
+          "c": 298893312,
+          "equal": true
+        },
+        "dedup_hits": {
+          "mirror": 9823,
+          "c": 9823,
+          "equal": true
+        },
+        "dedup_saved_bytes": {
+          "mirror": 160940032,
+          "c": 160940032,
+          "equal": true
+        },
+        "denied": {
+          "mirror": 5,
+          "independent_recount": 5,
+          "equal": true
+        },
+        "c_denial_enforced": {
+          "enforced": true,
+          "detail": {
+            "legit_attach_code": 0,
+            "legit_attach_name": "CAPSULE_OK",
+            "post_revoke_attach_code": -3,
+            "post_revoke_attach_name": "CAPSULE_E_REVOKED",
+            "enforced": true
+          }
+        }
+      },
+      "c_store_stats": {
+        "n_capsules": 728,
+        "n_extents": 667,
+        "stored_bytes": 298893312,
+        "logical_bytes": 615743488,
+        "dedup_saved_bytes": 160940032,
+        "evicted_bytes": 0,
+        "dedup_hits": 9823,
+        "denied_ops": 0,
+        "revocations": 0
+      },
+      "mirror_result": {
+        "manager": "capsule",
+        "peak_resident_tokens": 291888,
+        "final_resident_tokens": 291888,
+        "prefix_hit_tokens": 560016,
+        "recomputed_prefix_tokens": 172656,
+        "recomputed_tokens": 172656,
+        "generated_tokens": 119232,
+        "cross_tenant_reuse_events": 0,
+        "denied_attaches": 5,
+        "dedup_hits": 9823,
+        "stored_chunks": 18243,
+        "dedup_saved_chunks": 9823,
+        "evicted_chunks": 0,
+        "n_runs": 881
+      },
+      "wall_ns": {
+        "mirror_replay": 2798250,
+        "c_replay": 1198550916
+      },
+      "maxrss_measured": {
+        "before_bytes": 46923776,
+        "after_bytes": 427884544,
+        "delta_bytes": 380960768,
+        "unit_note": "ru_maxrss; bytes on macOS (Darwin)"
+      },
+      "replay_info": {
+        "wall_ns": 1198550916,
+        "n_ops": 1000,
+        "n_chunk_cache": 13842
+      }
+    },
+    "modeled": {
+      "note": "stored/dedup byte figures use SCALED_BPT=1024 (real store geometry)"
+    }
+  }
+}

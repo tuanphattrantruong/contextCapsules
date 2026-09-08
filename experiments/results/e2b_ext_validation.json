@@ -1,0 +1,1265 @@
+{
+  "meta": {
+    "experiment": "E2b_ext_validation",
+    "date_u": "Sat Aug 29 07:55:12 UTC 2026",
+    "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+    "arch": "arm64",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python_version": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "timer": "time.perf_counter_ns (Python monotonic ns)",
+    "cmd": "python experiments/run_e2b_ext.py",
+    "content_note": "no git; content bytes for real-C runs derived from hashlib.sha256-seeded numpy RNG (stable across runs)",
+    "n_cells": 36,
+    "variants": [
+      "capsule",
+      "capsule-poschain"
+    ],
+    "n_requests_per_cell": 1200,
+    "configs_per_variant": 18,
+    "counters_compared": [
+      "stored_bytes",
+      "dedup_hits",
+      "dedup_saved_bytes",
+      "denied (vs independent recount)",
+      "c denial path enforced",
+      "no cross-domain dedup"
+    ],
+    "scaled_bpt": 1024,
+    "chunk_nbytes": 16384,
+    "elapsed_s": 208.6883302499773,
+    "maxrss_kb": 1126192
+  },
+  "data": {
+    "cells": [
+      {
+        "variant": "capsule",
+        "T": 4,
+        "f": 0.25,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 637468672,
+          "dedup_hits": 29435,
+          "dedup_saved_bytes": 482263040
+        },
+        "c": {
+          "stored_bytes": 637468672,
+          "dedup_hits": 29435,
+          "dedup_saved_bytes": 482263040,
+          "n_capsules": 1774,
+          "n_extents": 1360,
+          "logical_bytes": 1737195520
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 4,
+        "f": 0.25,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 637796352,
+          "dedup_hits": 29472,
+          "dedup_saved_bytes": 482869248
+        },
+        "c": {
+          "stored_bytes": 637796352,
+          "dedup_hits": 29472,
+          "dedup_saved_bytes": 482869248,
+          "n_capsules": 1771,
+          "n_extents": 1355,
+          "logical_bytes": 1753055232
+        },
+        "mirror_denied": 17,
+        "independent_denied_recount": 17,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 4,
+        "f": 0.25,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 639434752,
+          "dedup_hits": 29102,
+          "dedup_saved_bytes": 476807168
+        },
+        "c": {
+          "stored_bytes": 639434752,
+          "dedup_hits": 29102,
+          "dedup_saved_bytes": 476807168,
+          "n_capsules": 1769,
+          "n_extents": 1357,
+          "logical_bytes": 1750482944
+        },
+        "mirror_denied": 52,
+        "independent_denied_recount": 52,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 4,
+        "f": 0.75,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 657981440,
+          "dedup_hits": 29036,
+          "dedup_saved_bytes": 475725824
+        },
+        "c": {
+          "stored_bytes": 657981440,
+          "dedup_hits": 29036,
+          "dedup_saved_bytes": 475725824,
+          "n_capsules": 1774,
+          "n_extents": 1579,
+          "logical_bytes": 1484636160
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 4,
+        "f": 0.75,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 652115968,
+          "dedup_hits": 28920,
+          "dedup_saved_bytes": 473825280
+        },
+        "c": {
+          "stored_bytes": 652115968,
+          "dedup_hits": 28920,
+          "dedup_saved_bytes": 473825280,
+          "n_capsules": 1771,
+          "n_extents": 1577,
+          "logical_bytes": 1475854336
+        },
+        "mirror_denied": 6,
+        "independent_denied_recount": 6,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 4,
+        "f": 0.75,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 653934592,
+          "dedup_hits": 28777,
+          "dedup_saved_bytes": 471482368
+        },
+        "c": {
+          "stored_bytes": 653934592,
+          "dedup_hits": 28777,
+          "dedup_saved_bytes": 471482368,
+          "n_capsules": 1769,
+          "n_extents": 1581,
+          "logical_bytes": 1487290368
+        },
+        "mirror_denied": 18,
+        "independent_denied_recount": 18,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 16,
+        "f": 0.25,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 723664896,
+          "dedup_hits": 25769,
+          "dedup_saved_bytes": 422199296
+        },
+        "c": {
+          "stored_bytes": 723664896,
+          "dedup_hits": 25769,
+          "dedup_saved_bytes": 422199296,
+          "n_capsules": 1762,
+          "n_extents": 1361,
+          "logical_bytes": 1847263232
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 16,
+        "f": 0.25,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 718864384,
+          "dedup_hits": 25826,
+          "dedup_saved_bytes": 423133184
+        },
+        "c": {
+          "stored_bytes": 718864384,
+          "dedup_hits": 25826,
+          "dedup_saved_bytes": 423133184,
+          "n_capsules": 1760,
+          "n_extents": 1361,
+          "logical_bytes": 1828716544
+        },
+        "mirror_denied": 26,
+        "independent_denied_recount": 26,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 16,
+        "f": 0.25,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 713048064,
+          "dedup_hits": 24789,
+          "dedup_saved_bytes": 406142976
+        },
+        "c": {
+          "stored_bytes": 713048064,
+          "dedup_hits": 24789,
+          "dedup_saved_bytes": 406142976,
+          "n_capsules": 1745,
+          "n_extents": 1362,
+          "logical_bytes": 1828962304
+        },
+        "mirror_denied": 63,
+        "independent_denied_recount": 63,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 16,
+        "f": 0.75,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 691978240,
+          "dedup_hits": 27004,
+          "dedup_saved_bytes": 442433536
+        },
+        "c": {
+          "stored_bytes": 691978240,
+          "dedup_hits": 27004,
+          "dedup_saved_bytes": 442433536,
+          "n_capsules": 1762,
+          "n_extents": 1578,
+          "logical_bytes": 1514930176
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 16,
+        "f": 0.75,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 697434112,
+          "dedup_hits": 26805,
+          "dedup_saved_bytes": 439173120
+        },
+        "c": {
+          "stored_bytes": 697434112,
+          "dedup_hits": 26805,
+          "dedup_saved_bytes": 439173120,
+          "n_capsules": 1760,
+          "n_extents": 1577,
+          "logical_bytes": 1515356160
+        },
+        "mirror_denied": 11,
+        "independent_denied_recount": 11,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 16,
+        "f": 0.75,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 696745984,
+          "dedup_hits": 25887,
+          "dedup_saved_bytes": 424132608
+        },
+        "c": {
+          "stored_bytes": 696745984,
+          "dedup_hits": 25887,
+          "dedup_saved_bytes": 424132608,
+          "n_capsules": 1745,
+          "n_extents": 1571,
+          "logical_bytes": 1521106944
+        },
+        "mirror_denied": 32,
+        "independent_denied_recount": 32,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 64,
+        "f": 0.25,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 705495040,
+          "dedup_hits": 21365,
+          "dedup_saved_bytes": 350044160
+        },
+        "c": {
+          "stored_bytes": 705495040,
+          "dedup_hits": 21365,
+          "dedup_saved_bytes": 350044160,
+          "n_capsules": 1723,
+          "n_extents": 1357,
+          "logical_bytes": 1742798848
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 64,
+        "f": 0.25,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 759431168,
+          "dedup_hits": 22914,
+          "dedup_saved_bytes": 375422976
+        },
+        "c": {
+          "stored_bytes": 759431168,
+          "dedup_hits": 22914,
+          "dedup_saved_bytes": 375422976,
+          "n_capsules": 1751,
+          "n_extents": 1382,
+          "logical_bytes": 1815166976
+        },
+        "mirror_denied": 38,
+        "independent_denied_recount": 38,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 64,
+        "f": 0.25,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 776077312,
+          "dedup_hits": 23099,
+          "dedup_saved_bytes": 378454016
+        },
+        "c": {
+          "stored_bytes": 776077312,
+          "dedup_hits": 23099,
+          "dedup_saved_bytes": 378454016,
+          "n_capsules": 1761,
+          "n_extents": 1366,
+          "logical_bytes": 1852211200
+        },
+        "mirror_denied": 89,
+        "independent_denied_recount": 89,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 64,
+        "f": 0.75,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 669171712,
+          "dedup_hits": 24069,
+          "dedup_saved_bytes": 394346496
+        },
+        "c": {
+          "stored_bytes": 669171712,
+          "dedup_hits": 24069,
+          "dedup_saved_bytes": 394346496,
+          "n_capsules": 1723,
+          "n_extents": 1556,
+          "logical_bytes": 1449000960
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 64,
+        "f": 0.75,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 719175680,
+          "dedup_hits": 24993,
+          "dedup_saved_bytes": 409485312
+        },
+        "c": {
+          "stored_bytes": 719175680,
+          "dedup_hits": 24993,
+          "dedup_saved_bytes": 409485312,
+          "n_capsules": 1751,
+          "n_extents": 1589,
+          "logical_bytes": 1515634688
+        },
+        "mirror_denied": 20,
+        "independent_denied_recount": 20,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule",
+        "T": 64,
+        "f": 0.75,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 728547328,
+          "dedup_hits": 25509,
+          "dedup_saved_bytes": 417939456
+        },
+        "c": {
+          "stored_bytes": 728547328,
+          "dedup_hits": 25509,
+          "dedup_saved_bytes": 417939456,
+          "n_capsules": 1761,
+          "n_extents": 1595,
+          "logical_bytes": 1563082752
+        },
+        "mirror_denied": 33,
+        "independent_denied_recount": 33,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 4,
+        "f": 0.25,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 734003200,
+          "dedup_hits": 23543,
+          "dedup_saved_bytes": 385728512
+        },
+        "c": {
+          "stored_bytes": 734003200,
+          "dedup_hits": 23543,
+          "dedup_saved_bytes": 385728512,
+          "n_capsules": 1774,
+          "n_extents": 1360,
+          "logical_bytes": 1737195520
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 4,
+        "f": 0.25,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 737591296,
+          "dedup_hits": 23381,
+          "dedup_saved_bytes": 383074304
+        },
+        "c": {
+          "stored_bytes": 737591296,
+          "dedup_hits": 23381,
+          "dedup_saved_bytes": 383074304,
+          "n_capsules": 1771,
+          "n_extents": 1355,
+          "logical_bytes": 1753055232
+        },
+        "mirror_denied": 17,
+        "independent_denied_recount": 17,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 4,
+        "f": 0.25,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 734412800,
+          "dedup_hits": 23305,
+          "dedup_saved_bytes": 381829120
+        },
+        "c": {
+          "stored_bytes": 734412800,
+          "dedup_hits": 23305,
+          "dedup_saved_bytes": 381829120,
+          "n_capsules": 1769,
+          "n_extents": 1357,
+          "logical_bytes": 1750482944
+        },
+        "mirror_denied": 52,
+        "independent_denied_recount": 52,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 4,
+        "f": 0.75,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 703381504,
+          "dedup_hits": 26265,
+          "dedup_saved_bytes": 430325760
+        },
+        "c": {
+          "stored_bytes": 703381504,
+          "dedup_hits": 26265,
+          "dedup_saved_bytes": 430325760,
+          "n_capsules": 1774,
+          "n_extents": 1579,
+          "logical_bytes": 1484636160
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 4,
+        "f": 0.75,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 698007552,
+          "dedup_hits": 26119,
+          "dedup_saved_bytes": 427933696
+        },
+        "c": {
+          "stored_bytes": 698007552,
+          "dedup_hits": 26119,
+          "dedup_saved_bytes": 427933696,
+          "n_capsules": 1771,
+          "n_extents": 1577,
+          "logical_bytes": 1475854336
+        },
+        "mirror_denied": 6,
+        "independent_denied_recount": 6,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 4,
+        "f": 0.75,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 699088896,
+          "dedup_hits": 26021,
+          "dedup_saved_bytes": 426328064
+        },
+        "c": {
+          "stored_bytes": 699088896,
+          "dedup_hits": 26021,
+          "dedup_saved_bytes": 426328064,
+          "n_capsules": 1769,
+          "n_extents": 1581,
+          "logical_bytes": 1487290368
+        },
+        "mirror_denied": 18,
+        "independent_denied_recount": 18,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 16,
+        "f": 0.25,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 799916032,
+          "dedup_hits": 21115,
+          "dedup_saved_bytes": 345948160
+        },
+        "c": {
+          "stored_bytes": 799916032,
+          "dedup_hits": 21115,
+          "dedup_saved_bytes": 345948160,
+          "n_capsules": 1762,
+          "n_extents": 1361,
+          "logical_bytes": 1847263232
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 16,
+        "f": 0.25,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 795672576,
+          "dedup_hits": 21138,
+          "dedup_saved_bytes": 346324992
+        },
+        "c": {
+          "stored_bytes": 795672576,
+          "dedup_hits": 21138,
+          "dedup_saved_bytes": 346324992,
+          "n_capsules": 1760,
+          "n_extents": 1361,
+          "logical_bytes": 1828716544
+        },
+        "mirror_denied": 26,
+        "independent_denied_recount": 26,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 16,
+        "f": 0.25,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 785104896,
+          "dedup_hits": 20391,
+          "dedup_saved_bytes": 334086144
+        },
+        "c": {
+          "stored_bytes": 785104896,
+          "dedup_hits": 20391,
+          "dedup_saved_bytes": 334086144,
+          "n_capsules": 1745,
+          "n_extents": 1362,
+          "logical_bytes": 1828962304
+        },
+        "mirror_denied": 63,
+        "independent_denied_recount": 63,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 16,
+        "f": 0.75,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 724631552,
+          "dedup_hits": 25011,
+          "dedup_saved_bytes": 409780224
+        },
+        "c": {
+          "stored_bytes": 724631552,
+          "dedup_hits": 25011,
+          "dedup_saved_bytes": 409780224,
+          "n_capsules": 1762,
+          "n_extents": 1578,
+          "logical_bytes": 1514930176
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 16,
+        "f": 0.75,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 727908352,
+          "dedup_hits": 24945,
+          "dedup_saved_bytes": 408698880
+        },
+        "c": {
+          "stored_bytes": 727908352,
+          "dedup_hits": 24945,
+          "dedup_saved_bytes": 408698880,
+          "n_capsules": 1760,
+          "n_extents": 1577,
+          "logical_bytes": 1515356160
+        },
+        "mirror_denied": 11,
+        "independent_denied_recount": 11,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 16,
+        "f": 0.75,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 723156992,
+          "dedup_hits": 24275,
+          "dedup_saved_bytes": 397721600
+        },
+        "c": {
+          "stored_bytes": 723156992,
+          "dedup_hits": 24275,
+          "dedup_saved_bytes": 397721600,
+          "n_capsules": 1745,
+          "n_extents": 1571,
+          "logical_bytes": 1521106944
+        },
+        "mirror_denied": 32,
+        "independent_denied_recount": 32,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 64,
+        "f": 0.25,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 740999168,
+          "dedup_hits": 19198,
+          "dedup_saved_bytes": 314540032
+        },
+        "c": {
+          "stored_bytes": 740999168,
+          "dedup_hits": 19198,
+          "dedup_saved_bytes": 314540032,
+          "n_capsules": 1723,
+          "n_extents": 1357,
+          "logical_bytes": 1742798848
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 64,
+        "f": 0.25,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 801243136,
+          "dedup_hits": 20362,
+          "dedup_saved_bytes": 333611008
+        },
+        "c": {
+          "stored_bytes": 801243136,
+          "dedup_hits": 20362,
+          "dedup_saved_bytes": 333611008,
+          "n_capsules": 1751,
+          "n_extents": 1382,
+          "logical_bytes": 1815166976
+        },
+        "mirror_denied": 38,
+        "independent_denied_recount": 38,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 64,
+        "f": 0.25,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 816676864,
+          "dedup_hits": 20621,
+          "dedup_saved_bytes": 337854464
+        },
+        "c": {
+          "stored_bytes": 816676864,
+          "dedup_hits": 20621,
+          "dedup_saved_bytes": 337854464,
+          "n_capsules": 1761,
+          "n_extents": 1366,
+          "logical_bytes": 1852211200
+        },
+        "mirror_denied": 89,
+        "independent_denied_recount": 89,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 64,
+        "f": 0.75,
+        "p_leakdup": 0.0,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 681705472,
+          "dedup_hits": 23304,
+          "dedup_saved_bytes": 381812736
+        },
+        "c": {
+          "stored_bytes": 681705472,
+          "dedup_hits": 23304,
+          "dedup_saved_bytes": 381812736,
+          "n_capsules": 1723,
+          "n_extents": 1556,
+          "logical_bytes": 1449000960
+        },
+        "mirror_denied": 0,
+        "independent_denied_recount": 0,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 64,
+        "f": 0.75,
+        "p_leakdup": 0.05,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 732348416,
+          "dedup_hits": 24189,
+          "dedup_saved_bytes": 396312576
+        },
+        "c": {
+          "stored_bytes": 732348416,
+          "dedup_hits": 24189,
+          "dedup_saved_bytes": 396312576,
+          "n_capsules": 1751,
+          "n_extents": 1589,
+          "logical_bytes": 1515634688
+        },
+        "mirror_denied": 20,
+        "independent_denied_recount": 20,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      },
+      {
+        "variant": "capsule-poschain",
+        "T": 64,
+        "f": 0.75,
+        "p_leakdup": 0.15,
+        "seed": 1,
+        "n_requests": 1200,
+        "trace_events": 2400,
+        "op_log_len": 2400,
+        "mirror": {
+          "stored_bytes": 741949440,
+          "dedup_hits": 24691,
+          "dedup_saved_bytes": 404537344
+        },
+        "c": {
+          "stored_bytes": 741949440,
+          "dedup_hits": 24691,
+          "dedup_saved_bytes": 404537344,
+          "n_capsules": 1761,
+          "n_extents": 1595,
+          "logical_bytes": 1563082752
+        },
+        "mirror_denied": 33,
+        "independent_denied_recount": 33,
+        "checks": {
+          "stored_bytes": true,
+          "dedup_hits": true,
+          "dedup_saved_bytes": true,
+          "denied_matches_independent_recount": true,
+          "c_denial_path_enforced": true,
+          "no_cross_domain_dedup": true
+        },
+        "all_equal": true
+      }
+    ],
+    "summary": {
+      "cells_passing": 36,
+      "cells_total": 36,
+      "all_pass": true
+    }
+  }
+}

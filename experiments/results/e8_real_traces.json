@@ -1,0 +1,3294 @@
+{
+  "meta": {
+    "experiment": "E8_real_traces",
+    "date_u": "Sat Aug 29 07:29:27 UTC 2026",
+    "uname_a": "Darwin anon-host 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:26:15 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6031 arm64",
+    "arch": "arm64",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python_version": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "timer": "time.perf_counter_ns (Python monotonic ns)",
+    "cmd": "python experiments/run_e8.py",
+    "content_note": "no git; content bytes for real-C runs derived from hashlib.sha256-seeded numpy RNG (stable across runs)",
+    "traces": [
+      "conversation",
+      "toolagent",
+      "synthetic-mooncake"
+    ],
+    "source": "Mooncake FAST'25 public traces, github.com/kvcache-ai/Mooncake/FAST25-release/traces",
+    "tenants": [
+      4,
+      16,
+      64
+    ],
+    "corpus_min_refs": [
+      10,
+      50
+    ],
+    "tenant_salts": [
+      1,
+      2,
+      3
+    ],
+    "managers": [
+      "noshare",
+      "prefix",
+      "partitioned",
+      "safekv-fn0.05",
+      "capsule-poschain"
+    ],
+    "n_cells": 90,
+    "kv_geometry": {
+      "REAL_BPT": 131072
+    },
+    "elapsed_s": 205.45856149995234,
+    "note": "arrival times, input/output lengths and prefix-block structure are the trace's own; tenant assignment and the corpus threshold are swept modelling choices"
+  },
+  "data": {
+    "cells": [
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 538096.0,
+        "recomputed_tokens_mean": 144883728.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3632230483007266,
+        "hit_rate_min": 0.3628425684905071,
+        "hit_rate_max": 0.3634751308994479,
+        "per_salt_hit_rate": [
+          0.3628425684905071,
+          0.3633514455122248,
+          0.3634751308994479
+        ],
+        "peak_resident_tokens_mean": 96471434.66666667,
+        "recomputed_tokens_mean": 92258618.66666667,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 420973.3333333333
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 90787056.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 538096.0,
+        "recomputed_tokens_mean": 144883728.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3527192140353171,
+        "hit_rate_min": 0.35159073212141534,
+        "hit_rate_max": 0.35358383378980973,
+        "per_salt_hit_rate": [
+          0.3529830761947263,
+          0.35159073212141534,
+          0.35358383378980973
+        ],
+        "peak_resident_tokens_mean": 97993269.33333333,
+        "recomputed_tokens_mean": 93780453.33333333,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 419654.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 90787056.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 538096.0,
+        "recomputed_tokens_mean": 144883728.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3471345243131789,
+        "hit_rate_min": 0.346491360299619,
+        "hit_rate_max": 0.34778475606315157,
+        "per_salt_hit_rate": [
+          0.3471274565767662,
+          0.346491360299619,
+          0.34778475606315157
+        ],
+        "peak_resident_tokens_mean": 98802400.0,
+        "recomputed_tokens_mean": 94589584.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 416726.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 90787056.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 538096.0,
+        "recomputed_tokens_mean": 144883728.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.37338763121832425,
+        "hit_rate_min": 0.37338763121832425,
+        "hit_rate_max": 0.37338763121832425,
+        "per_salt_hit_rate": [
+          0.37338763121832425,
+          0.37338763121832425,
+          0.37338763121832425
+        ],
+        "peak_resident_tokens_mean": 94998752.0,
+        "recomputed_tokens_mean": 90785936.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 455539.6666666667
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 90787056.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 538096.0,
+        "recomputed_tokens_mean": 144883728.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.37334522479984783,
+        "hit_rate_min": 0.3733452247998478,
+        "hit_rate_max": 0.3733452247998478,
+        "per_salt_hit_rate": [
+          0.3733452247998478,
+          0.3733452247998478,
+          0.3733452247998478
+        ],
+        "peak_resident_tokens_mean": 95004896.0,
+        "recomputed_tokens_mean": 90792080.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 446626.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 90787056.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 538096.0,
+        "recomputed_tokens_mean": 144883728.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.37317559912594184,
+        "hit_rate_min": 0.3731755991259419,
+        "hit_rate_max": 0.3731755991259419,
+        "per_salt_hit_rate": [
+          0.3731755991259419,
+          0.3731755991259419,
+          0.3731755991259419
+        ],
+        "peak_resident_tokens_mean": 95029472.0,
+        "recomputed_tokens_mean": 90816656.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 94997216.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 444745.0
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.3733982328229433,
+        "hit_rate_min": 0.3733982328229434,
+        "hit_rate_max": 0.3733982328229434,
+        "per_salt_hit_rate": [
+          0.3733982328229434,
+          0.3733982328229434,
+          0.3733982328229434
+        ],
+        "peak_resident_tokens_mean": 90787056.0,
+        "recomputed_tokens_mean": 90784400.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 493232.0,
+        "recomputed_tokens_mean": 203115696.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5633247105958107,
+        "hit_rate_min": 0.5630012168040426,
+        "hit_rate_max": 0.5636263580535893,
+        "per_salt_hit_rate": [
+          0.5630012168040426,
+          0.5633465569298003,
+          0.5636263580535893
+        ],
+        "peak_resident_tokens_mean": 93210389.33333333,
+        "recomputed_tokens_mean": 88695605.33333333,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 403234.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 87317840.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 493232.0,
+        "recomputed_tokens_mean": 203115696.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.555139897542269,
+        "hit_rate_min": 0.5549676476011977,
+        "hit_rate_max": 0.5554339828075128,
+        "per_salt_hit_rate": [
+          0.5554339828075128,
+          0.5549676476011977,
+          0.5550180622180966
+        ],
+        "peak_resident_tokens_mean": 94872853.33333333,
+        "recomputed_tokens_mean": 90358069.33333333,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 394420.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 87317840.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 493232.0,
+        "recomputed_tokens_mean": 203115696.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5487758924023938,
+        "hit_rate_min": 0.5486607790271413,
+        "hit_rate_max": 0.5488372301862875,
+        "per_salt_hit_rate": [
+          0.5486607790271413,
+          0.5488296679937527,
+          0.5488372301862875
+        ],
+        "peak_resident_tokens_mean": 96165482.66666667,
+        "recomputed_tokens_mean": 91650698.66666667,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 393869.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 87317840.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 493232.0,
+        "recomputed_tokens_mean": 203115696.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5699861619753896,
+        "hit_rate_min": 0.5699861619753896,
+        "hit_rate_max": 0.5699861619753896,
+        "per_salt_hit_rate": [
+          0.5699861619753896,
+          0.5699861619753896,
+          0.5699861619753896
+        ],
+        "peak_resident_tokens_mean": 91857344.0,
+        "recomputed_tokens_mean": 87342560.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 436869.6666666667
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 87317840.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 493232.0,
+        "recomputed_tokens_mean": 203115696.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5694416841128812,
+        "hit_rate_min": 0.5694416841128812,
+        "hit_rate_max": 0.5694416841128812,
+        "per_salt_hit_rate": [
+          0.5694416841128812,
+          0.5694416841128812,
+          0.5694416841128812
+        ],
+        "peak_resident_tokens_mean": 91967936.0,
+        "recomputed_tokens_mean": 87453152.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 419761.6666666667
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 87317840.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 493232.0,
+        "recomputed_tokens_mean": 203115696.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5672637726628473,
+        "hit_rate_min": 0.5672637726628473,
+        "hit_rate_max": 0.5672637726628473,
+        "per_salt_hit_rate": [
+          0.5672637726628473,
+          0.5672637726628473,
+          0.5672637726628473
+        ],
+        "peak_resident_tokens_mean": 92410304.0,
+        "recomputed_tokens_mean": 87895520.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 91829696.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 426088.0
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5701222814410167,
+        "hit_rate_min": 0.5701222814410167,
+        "hit_rate_max": 0.5701222814410167,
+        "per_salt_hit_rate": [
+          0.5701222814410167,
+          0.5701222814410167,
+          0.5701222814410167
+        ],
+        "peak_resident_tokens_mean": 87317840.0,
+        "recomputed_tokens_mean": 87314912.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 217424.0,
+        "recomputed_tokens_mean": 61224336.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6219156600299157,
+        "hit_rate_min": 0.62101527732371,
+        "hit_rate_max": 0.6225707372310253,
+        "per_salt_hit_rate": [
+          0.6225707372310253,
+          0.62101527732371,
+          0.6221609655350121
+        ],
+        "peak_resident_tokens_mean": 23776586.666666668,
+        "recomputed_tokens_mean": 23147962.666666668,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 167775.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21370224.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 217424.0,
+        "recomputed_tokens_mean": 61224336.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5840075968048609,
+        "hit_rate_min": 0.5838347679262703,
+        "hit_rate_max": 0.5841358246825249,
+        "per_salt_hit_rate": [
+          0.5838347679262703,
+          0.5840521978057875,
+          0.5841358246825249
+        ],
+        "peak_resident_tokens_mean": 26097482.666666668,
+        "recomputed_tokens_mean": 25468858.666666668,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 163220.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21370224.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 217424.0,
+        "recomputed_tokens_mean": 61224336.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.5678731847196622,
+        "hit_rate_min": 0.5660724193072506,
+        "hit_rate_max": 0.56998615713856,
+        "per_salt_hit_rate": [
+          0.567560977713176,
+          0.56998615713856,
+          0.5660724193072506
+        ],
+        "peak_resident_tokens_mean": 27085301.333333332,
+        "recomputed_tokens_mean": 26456677.333333332,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 162492.66666666666
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21370224.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 217424.0,
+        "recomputed_tokens_mean": 61224336.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 197537.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21370224.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 217424.0,
+        "recomputed_tokens_mean": 61224336.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 191747.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21370224.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "noshare",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.0,
+        "hit_rate_min": 0.0,
+        "hit_rate_max": 0.0,
+        "per_salt_hit_rate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "peak_resident_tokens_mean": 217424.0,
+        "recomputed_tokens_mean": 61224336.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "prefix",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "partitioned",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "safekv-fn0.05",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21998752.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 190043.66666666666
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "manager": "capsule-poschain",
+        "salts": [
+          1,
+          2,
+          3
+        ],
+        "hit_rate_mean": 0.6509536991956923,
+        "hit_rate_min": 0.6509536991956923,
+        "hit_rate_max": 0.6509536991956923,
+        "per_salt_hit_rate": [
+          0.6509536991956923,
+          0.6509536991956923,
+          0.6509536991956923
+        ],
+        "peak_resident_tokens_mean": 21370224.0,
+        "recomputed_tokens_mean": 21370128.0,
+        "cross_tenant_reuse_mean": 0.0,
+        "denied_attaches_mean": 0.0,
+        "leaked_private_blocks_mean": 0.0
+      }
+    ],
+    "comparisons": [
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 1.0175184522216774,
+        "delta_pp_min": 0.9923101923495492,
+        "delta_pp_max": 1.0555664332436265,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 2.0679018787626253,
+        "delta_pp_min": 1.9814399033133645,
+        "delta_pp_max": 2.1807500701528038,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 2.626370850976445,
+        "delta_pp_min": 2.5613476759791807,
+        "delta_pp_max": 2.6906872523324354,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 0.001060160461913151,
+        "delta_pp_min": 0.001060160461913151,
+        "delta_pp_max": 0.001060160461913151,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 0.005300802309560204,
+        "delta_pp_min": 0.005300802309560204,
+        "delta_pp_max": 0.005300802309560204,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 0.022263369700148417,
+        "delta_pp_min": 0.022263369700148417,
+        "delta_pp_max": 0.022263369700148417,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "conversation",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 0.679757084520601,
+        "delta_pp_min": 0.6495923387427438,
+        "delta_pp_max": 0.712106463697415,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 1.498238389874773,
+        "delta_pp_min": 1.468829863350396,
+        "delta_pp_max": 1.5154633839819076,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 2.1346389038622924,
+        "delta_pp_min": 2.1285051254729237,
+        "delta_pp_max": 2.1461502413875455,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 0.013611946562708255,
+        "delta_pp_min": 0.013611946562708255,
+        "delta_pp_max": 0.013611946562708255,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 0.06805973281355238,
+        "delta_pp_min": 0.06805973281355238,
+        "delta_pp_max": 0.06805973281355238,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 0.28585087781693996,
+        "delta_pp_min": 0.28585087781693996,
+        "delta_pp_max": 0.28585087781693996,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "toolagent",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 2.903803916577656,
+        "delta_pp_min": 2.8382961964667053,
+        "delta_pp_max": 2.993842187198237,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 4,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 6.6946102390831435,
+        "delta_pp_min": 6.681787451316746,
+        "delta_pp_max": 6.711893126942203,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 16,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 8.308051447603011,
+        "delta_pp_min": 8.09675420571323,
+        "delta_pp_max": 8.488127988844173,
+        "wins": 3,
+        "ties": 0,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 10,
+        "T": 64,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 4,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 16,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "capsule_vs": "prefix",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "capsule_vs": "partitioned",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      },
+      {
+        "trace": "synthetic-mooncake",
+        "corpus_min_refs": 50,
+        "T": 64,
+        "capsule_vs": "safekv-fn0.05",
+        "delta_pp_mean": 0.0,
+        "delta_pp_min": 0.0,
+        "delta_pp_max": 0.0,
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "n": 3
+      }
+    ],
+    "trace_stats": {
+      "conversation/cmr10/T4": {
+        "n_requests": 12031,
+        "n_events": 24062,
+        "n_tenants": 4,
+        "corpus_min_refs": 10,
+        "n_sessions": 7659,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 182790,
+        "n_corpus_blocks": 1341,
+        "n_private_blocks": 181449,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 288500,
+        "block_refs_corpus": 31353,
+        "block_refs_private": 257147,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 144793823,
+        "output_tokens_total": 4122048,
+        "max_private_blocks_per_owner": 46999
+      },
+      "conversation/cmr10/T16": {
+        "n_requests": 12031,
+        "n_events": 24062,
+        "n_tenants": 16,
+        "corpus_min_refs": 10,
+        "n_sessions": 7659,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 182790,
+        "n_corpus_blocks": 1341,
+        "n_private_blocks": 181449,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 288500,
+        "block_refs_corpus": 31353,
+        "block_refs_private": 257147,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 144793823,
+        "output_tokens_total": 4122048,
+        "max_private_blocks_per_owner": 13011
+      },
+      "conversation/cmr10/T64": {
+        "n_requests": 12031,
+        "n_events": 24062,
+        "n_tenants": 64,
+        "corpus_min_refs": 10,
+        "n_sessions": 7659,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 182790,
+        "n_corpus_blocks": 1341,
+        "n_private_blocks": 181449,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 288500,
+        "block_refs_corpus": 31353,
+        "block_refs_private": 257147,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 144793823,
+        "output_tokens_total": 4122048,
+        "max_private_blocks_per_owner": 4328
+      },
+      "conversation/cmr50/T4": {
+        "n_requests": 12031,
+        "n_events": 24062,
+        "n_tenants": 4,
+        "corpus_min_refs": 50,
+        "n_sessions": 7373,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 182790,
+        "n_corpus_blocks": 1,
+        "n_private_blocks": 182789,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 288500,
+        "block_refs_corpus": 12031,
+        "block_refs_private": 276469,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 144793823,
+        "output_tokens_total": 4122048,
+        "max_private_blocks_per_owner": 47410
+      },
+      "conversation/cmr50/T16": {
+        "n_requests": 12031,
+        "n_events": 24062,
+        "n_tenants": 16,
+        "corpus_min_refs": 50,
+        "n_sessions": 7373,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 182790,
+        "n_corpus_blocks": 1,
+        "n_private_blocks": 182789,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 288500,
+        "block_refs_corpus": 12031,
+        "block_refs_private": 276469,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 144793823,
+        "output_tokens_total": 4122048,
+        "max_private_blocks_per_owner": 12980
+      },
+      "conversation/cmr50/T64": {
+        "n_requests": 12031,
+        "n_events": 24062,
+        "n_tenants": 64,
+        "corpus_min_refs": 50,
+        "n_sessions": 7373,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 182790,
+        "n_corpus_blocks": 1,
+        "n_private_blocks": 182789,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 288500,
+        "block_refs_corpus": 12031,
+        "block_refs_private": 276469,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 144793823,
+        "output_tokens_total": 4122048,
+        "max_private_blocks_per_owner": 4439
+      },
+      "toolagent/cmr10/T4": {
+        "n_requests": 23608,
+        "n_events": 47216,
+        "n_tenants": 4,
+        "corpus_min_refs": 10,
+        "n_sessions": 19081,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 183300,
+        "n_corpus_blocks": 1362,
+        "n_private_blocks": 181938,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 409616,
+        "block_refs_corpus": 158006,
+        "block_refs_private": 251610,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 202940084,
+        "output_tokens_total": 4299817,
+        "max_private_blocks_per_owner": 46868
+      },
+      "toolagent/cmr10/T16": {
+        "n_requests": 23608,
+        "n_events": 47216,
+        "n_tenants": 16,
+        "corpus_min_refs": 10,
+        "n_sessions": 19081,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 183300,
+        "n_corpus_blocks": 1362,
+        "n_private_blocks": 181938,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 409616,
+        "block_refs_corpus": 158006,
+        "block_refs_private": 251610,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 202940084,
+        "output_tokens_total": 4299817,
+        "max_private_blocks_per_owner": 13060
+      },
+      "toolagent/cmr10/T64": {
+        "n_requests": 23608,
+        "n_events": 47216,
+        "n_tenants": 64,
+        "corpus_min_refs": 10,
+        "n_sessions": 19081,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 183300,
+        "n_corpus_blocks": 1362,
+        "n_private_blocks": 181938,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 409616,
+        "block_refs_corpus": 158006,
+        "block_refs_private": 251610,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 202940084,
+        "output_tokens_total": 4299817,
+        "max_private_blocks_per_owner": 3992
+      },
+      "toolagent/cmr50/T4": {
+        "n_requests": 23608,
+        "n_events": 47216,
+        "n_tenants": 4,
+        "corpus_min_refs": 50,
+        "n_sessions": 18781,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 183300,
+        "n_corpus_blocks": 18,
+        "n_private_blocks": 183282,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 409616,
+        "block_refs_corpus": 138619,
+        "block_refs_private": 270997,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 202940084,
+        "output_tokens_total": 4299817,
+        "max_private_blocks_per_owner": 47046
+      },
+      "toolagent/cmr50/T16": {
+        "n_requests": 23608,
+        "n_events": 47216,
+        "n_tenants": 16,
+        "corpus_min_refs": 50,
+        "n_sessions": 18781,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 183300,
+        "n_corpus_blocks": 18,
+        "n_private_blocks": 183282,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 409616,
+        "block_refs_corpus": 138619,
+        "block_refs_private": 270997,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 202940084,
+        "output_tokens_total": 4299817,
+        "max_private_blocks_per_owner": 13161
+      },
+      "toolagent/cmr50/T64": {
+        "n_requests": 23608,
+        "n_events": 47216,
+        "n_tenants": 64,
+        "corpus_min_refs": 50,
+        "n_sessions": 18781,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 183300,
+        "n_corpus_blocks": 18,
+        "n_private_blocks": 183282,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 409616,
+        "block_refs_corpus": 138619,
+        "block_refs_private": 270997,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 202940084,
+        "output_tokens_total": 4299817,
+        "max_private_blocks_per_owner": 4028
+      },
+      "synthetic-mooncake/cmr10/T4": {
+        "n_requests": 3993,
+        "n_events": 7986,
+        "n_tenants": 4,
+        "corpus_min_refs": 10,
+        "n_sessions": 2486,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 43924,
+        "n_corpus_blocks": 1255,
+        "n_private_blocks": 42669,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 121877,
+        "block_refs_corpus": 17793,
+        "block_refs_private": 104084,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 61194628,
+        "output_tokens_total": 595432,
+        "max_private_blocks_per_owner": 11112
+      },
+      "synthetic-mooncake/cmr10/T16": {
+        "n_requests": 3993,
+        "n_events": 7986,
+        "n_tenants": 16,
+        "corpus_min_refs": 10,
+        "n_sessions": 2486,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 43924,
+        "n_corpus_blocks": 1255,
+        "n_private_blocks": 42669,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 121877,
+        "block_refs_corpus": 17793,
+        "block_refs_private": 104084,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 61194628,
+        "output_tokens_total": 595432,
+        "max_private_blocks_per_owner": 3276
+      },
+      "synthetic-mooncake/cmr10/T64": {
+        "n_requests": 3993,
+        "n_events": 7986,
+        "n_tenants": 64,
+        "corpus_min_refs": 10,
+        "n_sessions": 2486,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 43924,
+        "n_corpus_blocks": 1255,
+        "n_private_blocks": 42669,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 121877,
+        "block_refs_corpus": 17793,
+        "block_refs_private": 104084,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 61194628,
+        "output_tokens_total": 595432,
+        "max_private_blocks_per_owner": 1272
+      },
+      "synthetic-mooncake/cmr50/T4": {
+        "n_requests": 3993,
+        "n_events": 7986,
+        "n_tenants": 4,
+        "corpus_min_refs": 50,
+        "n_sessions": 2211,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 43924,
+        "n_corpus_blocks": 0,
+        "n_private_blocks": 43924,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 121877,
+        "block_refs_corpus": 0,
+        "block_refs_private": 121877,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 61194628,
+        "output_tokens_total": 595432,
+        "max_private_blocks_per_owner": 11448
+      },
+      "synthetic-mooncake/cmr50/T16": {
+        "n_requests": 3993,
+        "n_events": 7986,
+        "n_tenants": 16,
+        "corpus_min_refs": 50,
+        "n_sessions": 2211,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 43924,
+        "n_corpus_blocks": 0,
+        "n_private_blocks": 43924,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 121877,
+        "block_refs_corpus": 0,
+        "block_refs_private": 121877,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 61194628,
+        "output_tokens_total": 595432,
+        "max_private_blocks_per_owner": 3400
+      },
+      "synthetic-mooncake/cmr50/T64": {
+        "n_requests": 3993,
+        "n_events": 7986,
+        "n_tenants": 64,
+        "corpus_min_refs": 50,
+        "n_sessions": 2211,
+        "tenant_salt": 3,
+        "block_tokens": 512,
+        "n_distinct_blocks": 43924,
+        "n_corpus_blocks": 0,
+        "n_private_blocks": 43924,
+        "n_private_blocks_multi_tenant": 0,
+        "block_refs_total": 121877,
+        "block_refs_corpus": 0,
+        "block_refs_private": 121877,
+        "block_refs_cross_tenant_private": 0,
+        "measured_leakdup_rate": 0.0,
+        "input_tokens_total": 61194628,
+        "output_tokens_total": 595432,
+        "max_private_blocks_per_owner": 1266
+      }
+    }
+  }
+}

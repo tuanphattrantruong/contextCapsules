@@ -1,0 +1,23 @@
+/home/anon/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 48.74it/s]
+model loaded in 2.7s on cpu
+[E5a] geometry
+  measured bytes/token = 131072 (paper constant 131072: True)
+[E5b] cross-process fidelity
+  bytes identical across process: True | chain match: True
+  identical generated ids: True (valid on this device: True) | revoke denies: True
+wrote experiments/results/e5b_fidelity_cpu.json
+/home/anon/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 43.35it/s]
+model loaded in 5.4s on mps
+[E5a] geometry
+  measured bytes/token = 131072 (paper constant 131072: True)
+[E5f] backend determinism probe
+  live self-consistent: True | restored self-consistent: True
+wrote experiments/results/e5f_determinism_mps.json

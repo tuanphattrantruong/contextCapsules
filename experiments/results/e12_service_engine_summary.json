@@ -1,0 +1,23 @@
+{
+  "experiment": "E12_service_backed_llamacpp",
+  "runs": 3,
+  "model": "qwen2.5-0.5b-instruct-q8_0.gguf",
+  "n_prompt": 512,
+  "engine_blob_bytes": 6298200,
+  "byte_exact_runs": 3,
+  "token_identical_runs": 3,
+  "hard_restart_recovery_runs": 3,
+  "post_revoke_deny_runs": 3,
+  "json_service_put_ms_median": 555.816,
+  "binary_service_put_ms_median": 446.188042,
+  "json_service_read_ms_p50_median": 582.887667,
+  "json_service_read_ms_p99_median": 620.809542,
+  "binary_service_read_ms_p50_median": 326.888667,
+  "binary_service_read_ms_p99_median": 361.280542,
+  "plain_file_read_ms_p50_median": 1.299708,
+  "json_service_over_plain_p50_median": 450.88970566621543,
+  "binary_service_over_plain_p50_median": 232.33025373134328,
+  "engine_state_set_ms_median": 5.065,
+  "pass": true,
+  "scope": "sidecar-mediated sequence-state boundary; no scheduler block manager, GPU-page capability, or mid-operation crash-point claim"
+}

@@ -1,0 +1,31 @@
+{
+  "experiment": "E14_concurrent_requests_summary",
+  "runs": 3,
+  "streams": 4,
+  "reps_per_stream": 10,
+  "first_token_identical_all_runs": true,
+  "arms": {
+    "prefill": {
+      "ttft_ms_p50_median": 408.174,
+      "ttft_ms_p95_median": 579.114,
+      "throughput_req_s_median": 9.418
+    },
+    "native": {
+      "ttft_ms_p50_median": 83.339,
+      "ttft_ms_p95_median": 112.913,
+      "throughput_req_s_median": 46.014
+    },
+    "capsule": {
+      "ttft_ms_p50_median": 79.175,
+      "ttft_ms_p95_median": 102.244,
+      "throughput_req_s_median": 49.376,
+      "throughput_req_s_range": [44.034, 55.904]
+    }
+  },
+  "source_files": [
+    "e14_concurrent.json",
+    "e14_concurrent_r2.json",
+    "e14_concurrent_r3.json"
+  ],
+  "scope": "shared model with independent contexts; no continuous batching or paged GPU block manager"
+}
